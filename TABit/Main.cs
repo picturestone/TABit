@@ -36,5 +36,11 @@ namespace TABit
 
             TuningO.Show();
         }
+
+        private void bSave_Click(object sender, EventArgs e)
+        {
+            Bar Testbar = new Bar(4, 4);
+            tbWorkspace.Lines = new String[] {Testbar.test_output()};
+        }
     }
 }
