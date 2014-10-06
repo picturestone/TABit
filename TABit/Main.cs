@@ -29,10 +29,10 @@ namespace TABit
         {
             Tuning TuningO = new Tuning();
 
-            strings = Convert.ToInt16(cbStrings.Text);
-            height = (strings * 30) + 35;
-            TuningO.Height = height;
-            TuningO.Width = 300;
+            //strings = Convert.ToInt16(cbStrings.Text);
+            //height = (strings * 30) + 35;
+            //TuningO.Height = height;
+            //TuningO.Width = 300;
 
             TuningO.Show();
         }
