@@ -18,7 +18,7 @@ namespace TABit
             notes = new List<Note>();
         }
 
-        public string test_output()
+        public string[] test_output()
         {
             /* Notelength:                  Requiered to complete bar
              * 1/1 -> 1 = Full              1
@@ -45,18 +45,19 @@ namespace TABit
             List<int> notelenghts = get_notelengths();
             Dictionary<int, int> notelength_writtenlength = get_writtenlength(notelenghts);
 
-            string output = string_output(notelength_writtenlength, 6);
+            string[] output = string_output(notelength_writtenlength, 6);
             return output;
         }
 
-        public String string_output(Dictionary<int, int> notelength_writtenlength, int stringnumber_input)
+        public String[] string_output(Dictionary<int, int> notelength_writtenlength, int stringnumber_input)
         {
+            String[] output_array = new String[stringnumber_input];
             String output = "";
             int bar_writtenlength = notelength_writtenlength.Keys.First() * notelength_writtenlength[notelength_writtenlength.Keys.First()] * time_signature[0] / time_signature[1];
 
             for (int stringnumber = 1; stringnumber <= stringnumber_input; stringnumber++)
             {
-                output += "|";
+                output = "|";
                 List<Note> notes_on_string = new List<Note>();
 
                 foreach (Note note in notes)
@@ -133,9 +134,9 @@ namespace TABit
                         startpoint++;
                     }
                 }
-                output += "\n";
+                output_array[stringnumber - 1] = output;
             }
-            return output;
+            return output_array;
         }
 
         public List<int> get_notelengths()
