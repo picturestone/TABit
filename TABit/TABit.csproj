@@ -45,6 +45,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bar.cs" />
+    <Compile Include="KeyDetection.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
     </Compile>
