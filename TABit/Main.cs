@@ -34,12 +34,22 @@ namespace TABit
             cbStrings.SelectedIndex = 2;
             cbTimingUpside.SelectedIndex = 2;
             cbTimingDownside.SelectedIndex = 1;
+
+
+            tbWorkspace.KeyDown += new KeyEventHandler(tbWorkspace_KeyDown);
+  
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
+
+        private void tbWorkspace_KeyDown(object sender, KeyEventArgs e)
+        {
+            string ToWrite = KeyDetection.Detection(sender,e);
+        }
+       
 
         private void bTuning_Click(object sender, EventArgs e)
         {

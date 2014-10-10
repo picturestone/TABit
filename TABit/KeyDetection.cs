@@ -12,12 +12,12 @@ namespace TABit
 {
     public static class KeyDetection
     {
-        private string ToWrite;
+        private static string ToWrite;
 
         //http://www.java2s.com/Code/CSharp/Event/Altkeypressed.htm
         //http://www.cambiaresearch.com/articles/15/javascript-char-codes-key-codes
 
-        private string textBox1_KeyDown(object sender, KeyEventArgs e)
+        public static string Detection(object sender, KeyEventArgs e)
         {
 
             if ((Control.ModifierKeys & Keys.Shift) == Keys.Shift)
@@ -224,7 +224,9 @@ namespace TABit
                         ToWrite = e.KeyCode.ToString();
                         return ToWrite;
                 }
+                
             }
+            return "";
         }
     }
 }
