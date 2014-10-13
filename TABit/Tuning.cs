@@ -79,7 +79,7 @@ namespace TABit
             bCancel.FlatStyle = FlatStyle.Flat;
             bCancel.FlatAppearance.BorderColor = Color.DarkGray;
 
-            tlp.Controls.Add(bCancel, 0, rows + 1);
+            tlp.Controls.Add(bCancel, 1, rows + 1);
 
 
             Button bSave = new Button();
@@ -89,7 +89,7 @@ namespace TABit
             bSave.FlatStyle = FlatStyle.Flat;
             bSave.FlatAppearance.BorderColor = Color.DarkGray;
 
-            tlp.Controls.Add(bSave, 1, rows + 1);
+            tlp.Controls.Add(bSave, 0, rows + 1);
 
 
             this.Controls.Add(tlp);

@@ -72,6 +72,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Tuning.resx">
       <DependentUpon>Tuning.cs</DependentUpon>
@@ -89,6 +90,72 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\note_32.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\note_eighth.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\note_full.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\note_half.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\note_quarter.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\note_sixteenth.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\note-half.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\note_32-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\note_eighth-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\note_half-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\note_quarter-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\note_quintol-32-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\note_quintol-eighth-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\note_quintol-half-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\note_quintol-quarter-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\note_quintol-sixteenth-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\note_sixteenth-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\note_triole-32-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\note_triole-eigth-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\note_triole-half-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\note_triole-quarter-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\note_triole-sixteenth-100.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

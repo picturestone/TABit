@@ -28,7 +28,27 @@ namespace TABit
             toolTip1.SetToolTip(bSaveTo, "Save To");
             toolTip1.SetToolTip(bOpen, "Open");
             toolTip1.SetToolTip(bPrint, "Print");
+            toolTip1.SetToolTip(bTuning, "Tuning Settings");
             toolTip1.SetToolTip(bSettings, "Settings");
+
+            toolTip1.SetToolTip(bFull, "1/1");
+            toolTip1.SetToolTip(bHalf, "1/2");
+            toolTip1.SetToolTip(bQuarter, "1/4");
+            toolTip1.SetToolTip(bEight, "1/8");
+            toolTip1.SetToolTip(bSixteenth, "1/16");
+            toolTip1.SetToolTip(b32, "1/32");
+            toolTip1.SetToolTip(bTriol, "Triol");
+            toolTip1.SetToolTip(bQuintol, "Quintol");
+
+            toolTip1.SetToolTip(bRelease, "Release");
+            toolTip1.SetToolTip(bHammerOn, "Hammer On");
+            toolTip1.SetToolTip(bPullOff, "Pull Off");
+            toolTip1.SetToolTip(bBend, "Bend");
+            toolTip1.SetToolTip(bTap, "Tap");
+            toolTip1.SetToolTip(bVibrate, "Vibrate");
+            toolTip1.SetToolTip(bSlideUp, "Slide Up");
+            toolTip1.SetToolTip(bSlideDown, "Slide Down");
+            toolTip1.SetToolTip(bPM, "PM");
             ////////////////////////////////////////////////
 
             cbStrings.SelectedIndex = 2;
