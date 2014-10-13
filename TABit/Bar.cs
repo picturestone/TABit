@@ -35,18 +35,25 @@ namespace TABit
              * 1/24 -> 24 = Sixteenth-Triol 24
              * 1/32 -> 32 =                 32
              */
-            notes.Add(new Note(0, 2, 1, 1));
+            notes.Add(new Note(0, 1, 2, 2));
             notes.Add(new Note(5, 4, 1, 2));
             notes.Add(new Note(5, 4, 1, 3));
-            notes.Add(new Note(5, 1, 2, 1));
-            notes.Add(new Note(10, 2, 3, 1));
-            notes.Add(new Note(5, 2, 3, 2));
+            notes.Add(new Note(5, 2, 6, 1));
+            notes.Add(new Note(10, 2, 3, 2));
+            notes.Add(new Note(5, 2, 3, 3));
 
-            List<int> notelenghts = get_notelengths();
-            Dictionary<int, int> notelength_writtenlength = get_writtenlength(notelenghts);
+            if (bar_lengthcheck(6))
+            {
+                List<int> notelenghts = get_notelengths();
+                Dictionary<int, int> notelength_writtenlength = get_writtenlength(notelenghts);
 
-            string[] output = string_output(notelength_writtenlength, 6);
-            return output;
+                string[] output = string_output(notelength_writtenlength, 6);
+                return output;
+            }
+            else
+            {
+                return new string[1]{"i can not draw this, your notes are to long."};
+            }
         }
 
         public String[] string_output(Dictionary<int, int> notelength_writtenlength, int stringnumber_input)
@@ -134,6 +141,15 @@ namespace TABit
                         startpoint++;
                     }
                 }
+
+                if (output.Count() < bar_writtenlength)
+                {
+                    for (i = 0; i <= bar_writtenlength - (output.Count() - 1); i++)
+                    {
+                        output = output + "-";
+                    }
+                }
+
                 output_array[stringnumber - 1] = output;
             }
             return output_array;
@@ -154,11 +170,11 @@ namespace TABit
 
         public Dictionary<int, int> get_writtenlength(List<int> notelengths)
         {
-            bool compress = true;
+            /*bool compress = true;
             if (notelengths.Contains(1) || notelengths.Contains(2))
             {
                 compress = false;
-            }
+            }*/
 
             int gcd_of_notes = GCD(notelengths);
             int[] quaterlength_array = new int[notelengths.Count()];
@@ -195,7 +211,7 @@ namespace TABit
             if (longest_note > quaterlength)
             {
                 quaterlength = Convert.ToInt16(((2 * longest_note) / quaterlength) * quaterlength);
-                compress = false;
+                /*compress = false;*/
             }
 
             i = 0;
@@ -208,7 +224,7 @@ namespace TABit
 
             i = 0;
             int compress_factor = GCD(writtenlengths);
-            if (compress == true && compress_factor > 1)
+            if (/*compress == true && */compress_factor > 1)
             {
                 foreach (int writtenlength in writtenlengths)
                 {
@@ -225,6 +241,19 @@ namespace TABit
                 i++;
             }
 
+            if (notelengths_writtenlengths[1] < 8 || notelengths_writtenlengths[2] < 4)
+            {
+                i = 0;
+
+                int factor = 8 / notelengths_writtenlengths[1];
+
+                foreach (int notelength in notelengths)
+                {
+                    notelengths_writtenlengths[notelength] = notelengths_writtenlengths[notelength] * factor;
+                }
+            }
+
+
             return notelengths_writtenlengths;
         }
 
@@ -239,6 +268,45 @@ namespace TABit
         static int GCD(int a, int b)
         {
             return b == 0 ? a : GCD(b, a % b);
+        }
+
+        public bool bar_lengthcheck(int stringnumber)
+        {
+            for (int i = 1; i <= stringnumber; i++)
+            {
+                int summed_notelength = 0;
+                List<int> notes_on_string = new List<int>();
+
+                foreach (Note note in notes)
+                {
+                    if (note.stringnumber == i)
+                    {
+                        notes_on_string.Add(note.length);
+                    }
+                }
+
+                if (notes_on_string.Count() == 0)
+                {
+                    continue;
+                }
+                int gcd = GCD(notes_on_string);
+
+                foreach (int note in notes_on_string)
+                {
+                    int summ = gcd / note;
+                    summed_notelength += summ;
+                }
+
+                int bar_timing_length = gcd / this.time_signature[1];
+                int max_summed_notelength = this.time_signature[0] * bar_timing_length;
+
+                if (max_summed_notelength < summed_notelength)
+                {
+                    return false;
+                }
+            }
+
+            return true;
         }
     }
 }
