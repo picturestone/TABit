@@ -45,6 +45,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bar.cs" />
+    <Compile Include="KeyAction.cs" />
+    <Compile Include="KeyActionsToDo\ChooseBarAction.cs" />
+    <Compile Include="KeyActionsToDo\ChooseLineAction.cs" />
+    <Compile Include="KeyActionsToDo\ChooseNoteAction.cs" />
+    <Compile Include="KeyActionsToDo\ChooseSpeedAction.cs" />
+    <Compile Include="KeyActionsToDo\ChooseStringAction.cs" />
+    <Compile Include="KeyActionsToDo\DeleteAction.cs" />
+    <Compile Include="KeyActionsToDo\OpenMenueAction.cs" />
+    <Compile Include="KeyActionsToDo\WriteNoteAction.cs" />
     <Compile Include="KeyDetection.cs" />
     <Compile Include="Main.cs">
       <SubType>Form</SubType>
