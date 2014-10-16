@@ -63,6 +63,16 @@ namespace TABit.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap NewFile_6276 {
+            get {
+                object obj = ResourceManager.GetObject("NewFile_6276", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap note_32 {
             get {
                 object obj = ResourceManager.GetObject("note_32", resourceCulture);
@@ -276,6 +286,76 @@ namespace TABit.Properties {
         internal static System.Drawing.Bitmap note_triole_sixteenth_100 {
             get {
                 object obj = ResourceManager.GetObject("note_triole_sixteenth_100", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Open_6296 {
+            get {
+                object obj = ResourceManager.GetObject("Open_6296", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Open_6529 {
+            get {
+                object obj = ResourceManager.GetObject("Open_6529", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Print_11009 {
+            get {
+                object obj = ResourceManager.GetObject("Print_11009", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Save_6530 {
+            get {
+                object obj = ResourceManager.GetObject("Save_6530", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SaveFileDialogControl_703 {
+            get {
+                object obj = ResourceManager.GetObject("SaveFileDialogControl_703", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap settings {
+            get {
+                object obj = ResourceManager.GetObject("settings", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap v1_0_TABit_Logo256 {
+            get {
+                object obj = ResourceManager.GetObject("v1_0_TABit_Logo256", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

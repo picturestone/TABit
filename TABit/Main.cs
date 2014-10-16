@@ -15,6 +15,9 @@ namespace TABit
         int strings;
         int height;
 
+        Tuning TuningO = null;
+        Settings SettingsO = null;
+
         public Dictionary<int, TABit.Actions.KeyAction> KeyActionDict;
        
 
@@ -51,7 +54,7 @@ namespace TABit
             toolTip1.SetToolTip(bVibrate, "Vibrate");
             toolTip1.SetToolTip(bSlideUp, "Slide Up");
             toolTip1.SetToolTip(bSlideDown, "Slide Down");
-            toolTip1.SetToolTip(bPM, "PM");
+            toolTip1.SetToolTip(bPM, "Palm Muting");
             ////////////////////////////////////////////////
 
             cbStrings.SelectedIndex = 2;
@@ -139,22 +142,43 @@ namespace TABit
 
         private void bTuning_Click(object sender, EventArgs e)
         {
-            strings = Convert.ToInt16(cbStrings.Text);
 
-            Tuning TuningO = new Tuning(strings);
+            if (System.Windows.Forms.Application.OpenForms["Tuning"] as Tuning == null)
+            {
+                strings = Convert.ToInt16(cbStrings.Text);
 
-            height = (strings * 30) + 80;
-            TuningO.Height = height;
-            TuningO.Width = 180;
+                TuningO = new Tuning(strings);
 
-            TuningO.Show();
-            
+                height = (strings * 30) + 80;
+                TuningO.Height = height;
+                TuningO.Width = 180;
+
+                TuningO.Show();
+            }
+            else
+            {
+                TuningO.TopMost = true;
+            }
         }
 
         private void bSave_Click(object sender, EventArgs e)
         {
             Bar Testbar = new Bar(4, 4);
             tbWorkspace.Lines = Testbar.test_output();
+        }
+
+        private void bSettings_Click(object sender, EventArgs e)
+        {
+
+            if (System.Windows.Forms.Application.OpenForms["Settings"] as Settings == null)
+            {
+                SettingsO = new Settings();
+                SettingsO.Show();
+            }
+            else
+            {
+                SettingsO.TopMost = true;
+            }
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace TABit
 {
-    partial class Tuning
+    partial class Settings
     {
         /// <summary>
         /// Required designer variable.
@@ -28,23 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Tuning));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Settings));
             this.SuspendLayout();
             // 
-            // Tuning
+            // Settings
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(384, 362);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.ClientSize = new System.Drawing.Size(736, 497);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Tuning";
-            this.Text = "TABit - Tuning Settings";
+            this.Name = "Settings";
+            this.Text = "TABit - Settings";
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
     }
 }
