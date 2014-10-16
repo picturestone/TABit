@@ -58,6 +58,8 @@ namespace TABit
             cbTimingUpside.SelectedIndex = 2;
             cbTimingDownside.SelectedIndex = 1;
 
+            KeyActionDict = new Dictionary<int, Actions.KeyAction>();
+
             #region KeyActionDic
             KeyActionDict.Add(27,new Actions.OpenMenueAction());     //Escape
             KeyActionDict.Add(112, new Actions.ChooseBarAction());   //F1 
@@ -106,7 +108,7 @@ namespace TABit
 
             #endregion
 
-            KeyActionDict = new Dictionary<int, Actions.KeyAction>();
+            
 
             tbWorkspace.KeyDown += new KeyEventHandler(tbWorkspace_KeyDown);
   
