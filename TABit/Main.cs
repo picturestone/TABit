@@ -93,9 +93,9 @@ namespace TABit
             KeyActionDict.Add(34, new Actions.ChooseLineAction());    //bild runter
             KeyActionDict.Add(38, new Actions.ChooseStringAction());    //Pfeil rauf
             KeyActionDict.Add(40, new Actions.ChooseStringAction());    //Pfeil runter
-            KeyActionDict.Add(37, new Actions.ChooseNoteAction());    //Pfeil links
-            KeyActionDict.Add(39, new Actions.ChooseNoteAction());    //Pfeil rechts
-            KeyActionDict.Add(32, new Actions.ChooseNoteAction());    //Space
+            KeyActionDict.Add(37, new Actions.ChooseNoteAction(37));    //Pfeil links
+            KeyActionDict.Add(39, new Actions.ChooseNoteAction(39));    //Pfeil rechts
+            KeyActionDict.Add(32, new Actions.ChooseNoteAction(32));    //Space
             KeyActionDict.Add(97, new Actions.WriteNoteAction(97));    //1 Num       
             KeyActionDict.Add(98, new Actions.WriteNoteAction(98));    //2 Num 
             KeyActionDict.Add(99, new Actions.WriteNoteAction(99));    //3 Num

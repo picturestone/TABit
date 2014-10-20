@@ -20,14 +20,18 @@ namespace TABit.Actions
         public void doKeyAction(TextBox box)
         {
             
-            string Writting = ToWrite.ToString();
-
             
             KeysConverter kc = new KeysConverter();
 
+            int CurrentPosition = box.SelectionStart;
 
+            string Writting = kc.ConvertToString(ToWrite);
                 
-            box.Text = box.Text.Insert(box.SelectionStart, kc.ConvertToString(ToWrite));
+            box.Text = box.Text.Insert(box.SelectionStart, Writting);
+
+
+
+            box.Select(CurrentPosition+Writting.Length , 0);
         }
     }
 }

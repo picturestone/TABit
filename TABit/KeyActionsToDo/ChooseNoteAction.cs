@@ -9,15 +9,31 @@ namespace TABit.Actions
 {
     public class ChooseNoteAction :KeyAction 
     {
+        private int Pressed;
 
-        public ChooseNoteAction() 
+        public ChooseNoteAction(int Pressed) 
         {
-        
+            this.Pressed = Pressed;
         }
 
 
         public void doKeyAction(TextBox box)
         {
+            int CurrentPosition = box.SelectionStart;
+
+            KeysConverter kc = new KeysConverter();
+
+            string PressedKey = kc.ConvertToString(Pressed);
+
+            if (PressedKey == "Right" || PressedKey== "Space")
+            {
+                box.Select(CurrentPosition+1, 0);
+            }
+            else if (PressedKey == "Left")
+            {
+                box.Select(CurrentPosition-1, 0);
+            }
+            
         }
     }
 }
