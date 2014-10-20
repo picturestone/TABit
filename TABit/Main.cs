@@ -184,5 +184,19 @@ namespace TABit
                 SettingsO.TopMost = true;
             }
         }
+
+        private void showpicture()
+        {
+            try
+            {
+                string filename = "_" + currentLength;
+                pbNote.Image = new Bitmap((Image)Properties.Resources.ResourceManager.GetObject(filename));
+                pbNote.Refresh();
+            }
+            catch
+            {
+
+            }
+        }
     }
 }
