@@ -25,6 +25,8 @@ namespace TABit
 
         public Main()
         {
+            
+
             InitializeComponent();
 
             //2-8
@@ -108,8 +110,8 @@ namespace TABit
             KeyActionDict.Add(104, new Actions.WriteNoteAction(104));   //8 Num
             KeyActionDict.Add(105, new Actions.WriteNoteAction(105));   //9 Num
             KeyActionDict.Add(96, new Actions.WriteNoteAction(96));    //0 Num
-            KeyActionDict.Add(109, new Actions.ChooseSpeedAction(16,"-"));   //Minus Num
-            KeyActionDict.Add(107, new Actions.ChooseSpeedAction(16,"+"));   //Plus Num
+            KeyActionDict.Add(109, new Actions.ChooseSpeedAction(currentLength,"-"));   //Minus Num
+            KeyActionDict.Add(107, new Actions.ChooseSpeedAction(currentLength,"+"));   //Plus Num
 
             #endregion
 

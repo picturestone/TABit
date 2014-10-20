@@ -25,23 +25,26 @@ namespace TABit.Actions
 
         public void doKeyAction(TextBox box)
         {
-            int currentIndex = Array.IndexOf(lengthArray, currentLength);
-
-            if (direction == "-")
+            try
             {
-                
-                try
+                int currentIndex = Array.IndexOf(lengthArray, currentLength);
+
+                if (direction == "-")
                 {
-                    int newLength = lengthArray.ElementAt(currentIndex - 1);
-                }
 
-                catch{}
+                    int newLength = lengthArray.ElementAt(currentIndex - 1);
+                   
+
+                }
+                else if (direction == "+")
+                {
+                    int newLength = lengthArray.ElementAt(currentIndex + 1);
+                   
+                }
+                else { }
             }
-            else if (direction == "+")
-            {
-                int newLength = lengthArray.ElementAt(currentIndex + 1);
-            }
-            else { }
+            catch { }
+
             
         }
     }
