@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace TABit
 {
@@ -240,8 +241,17 @@ namespace TABit
         {
             if (opendialog.ShowDialog() == DialogResult.OK)
             {
-                opendialog.FileName = "";
+                //opendialog.FileName = "";
                 tbWorkspace.Text += "Opened";
+
+                using (StreamReader sr = new StreamReader(opendialog.FileName))
+                {
+                    while (sr.Peek() >= 0)
+                    {
+                        tbWorkspace.Text = "";
+                        tbWorkspace.Text = sr.ReadToEnd();
+                    }
+                }
             }
         }
 
