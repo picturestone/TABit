@@ -122,9 +122,8 @@ namespace TABit
 
             currentLength = 1;
             showpicture();
-            
 
-            tbWorkspace.KeyDown += new KeyEventHandler(tbWorkspace_KeyDown);
+            KeyDown += new KeyEventHandler(tbWorkspace_KeyDown);
 
             //SaveFileDialog
             savetodialog = new SaveFileDialog();
