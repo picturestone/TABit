@@ -15,7 +15,7 @@ namespace TABit
         int strings;
         int height;
 
-       
+        int currentLength;
 
         Tuning TuningO = null;
         Settings SettingsO = null;
