@@ -117,9 +117,77 @@ namespace TABit
 
         String[] string_output(Dictionary<int, int> written_lengths, int number_of_strings, int bar_length)
         {
-            String[] string_output = new string[number_of_strings];
-            string_output[0] = "Sis das not wörk jät. Plies weit antill ai häf finischt seh fanktschen";
-            return string_output;
+            String[] output = new string[number_of_strings];
+
+
+            //TODO: make the bar-checker as a function. checks if bar is too long and if the startpoints of two notes on the same string are the same
+            foreach (Note note in notes)
+            {
+                if ((note.fret <= 9 && note.fret >= 0 && note.startpoint > bar_length - 1) || (note.fret > 9 && note.startpoint >= bar_length - 1))
+                {
+                    throw new Exception("Notes in bar are to long");
+                }
+            }
+
+            for (int string_number = 1; string_number <= number_of_strings; string_number++)
+            {
+                //Get all notes on string_number
+                List<Note> notes_on_string = new List<Note>();
+                foreach (Note note in notes)
+                {
+                    if (note.stringnumber == string_number)
+                    {
+                        notes_on_string.Add(note);
+                    }
+                }
+
+                //add "|" at beginning of the bar
+                output[string_number - 1] += "|";
+                if (notes_on_string.Count() > 0)
+                {
+                    for (int character_number = 0; character_number <= bar_length - 1; character_number++)
+                    {
+                        foreach (Note note in notes_on_string)
+                        {
+                            if (note.startpoint == character_number)
+                            {
+                                int note_fret = note.fret;
+
+                                if (note_fret >= 0 && note_fret <= 9)
+                                {
+                                    //Fret has one character --> pass one character at end of the foreach
+                                    output[string_number - 1] += Convert.ToString(note_fret);
+                                }
+                                else if (note_fret >= 10)
+                                {
+                                    //Fret has two characters --> pass one character here and one at end of the foreach
+                                    output[string_number - 1] += Convert.ToString(note_fret);
+                                    character_number ++;
+                                }
+                                else if (note_fret == -1)
+                                {
+                                    //The note is a ghost-note --> pass one character at end of the foreach
+                                    output[string_number - 1] += "x";
+                                }
+                            }
+                            else
+                            {
+                                output[string_number - 1] += "-";
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    for (int character_number = 0; character_number <= bar_length - 1; character_number++)
+                    {
+                        output[string_number - 1] += "-";
+                    }
+                }
+            }
+
+            //output[0] = "Sis das not wörk jät. Plies weit antill ai häf finischt seh fanktschen";
+            return output;
         }
 
 
