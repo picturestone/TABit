@@ -15,6 +15,8 @@ namespace TABit
         int strings;
         int height;
 
+       
+
         Tuning TuningO = null;
         Settings SettingsO = null;
 
@@ -106,8 +108,8 @@ namespace TABit
             KeyActionDict.Add(104, new Actions.WriteNoteAction(104));   //8 Num
             KeyActionDict.Add(105, new Actions.WriteNoteAction(105));   //9 Num
             KeyActionDict.Add(96, new Actions.WriteNoteAction(96));    //0 Num
-            KeyActionDict.Add(109, new Actions.ChooseSpeedAction());   //Minus Num
-            KeyActionDict.Add(107, new Actions.ChooseSpeedAction());   //Plus Num
+            KeyActionDict.Add(109, new Actions.ChooseSpeedAction(16,"-"));   //Minus Num
+            KeyActionDict.Add(107, new Actions.ChooseSpeedAction(16,"+"));   //Plus Num
 
             #endregion
 
