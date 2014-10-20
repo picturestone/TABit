@@ -86,8 +86,8 @@ namespace TABit
             KeyActionDict.Add(56, new Actions.WriteNoteAction(56));    //8 oben
             KeyActionDict.Add(57, new Actions.WriteNoteAction(57));    //9 oben
             KeyActionDict.Add(48, new Actions.WriteNoteAction(48));    //0 oben
-            KeyActionDict.Add(8, new Actions.DeleteAction());     //Backslash
-            KeyActionDict.Add(508, new Actions.DeleteAction());   //Shift + Backslash
+            KeyActionDict.Add(8, new Actions.DeleteAction(8));     //Backslash
+            KeyActionDict.Add(508, new Actions.DeleteAction(508));   //Shift + Backslash
             KeyActionDict.Add(81, new Actions.ChooseStringAction());    //q       
             KeyActionDict.Add(87, new Actions.ChooseStringAction());    //w 
             KeyActionDict.Add(69, new Actions.ChooseStringAction());    //e 
@@ -113,8 +113,8 @@ namespace TABit
             KeyActionDict.Add(104, new Actions.WriteNoteAction(104));   //8 Num
             KeyActionDict.Add(105, new Actions.WriteNoteAction(105));   //9 Num
             KeyActionDict.Add(96, new Actions.WriteNoteAction(96));    //0 Num
-            KeyActionDict.Add(109, new Actions.ChooseSpeedAction(currentLength,"-",this));   //Minus Num
-            KeyActionDict.Add(107, new Actions.ChooseSpeedAction(currentLength,"+",this));   //Plus Num
+            KeyActionDict.Add(109, new Actions.ChooseSpeedAction("-",this));   //Minus Num
+            KeyActionDict.Add(107, new Actions.ChooseSpeedAction("+",this));   //Plus Num
 
             #endregion
 

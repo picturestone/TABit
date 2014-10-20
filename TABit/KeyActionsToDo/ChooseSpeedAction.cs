@@ -9,17 +9,15 @@ namespace TABit.Actions
 {
     public class ChooseSpeedAction : KeyAction
     {
-        private int currentLength;
         private string direction;
         private int[] lengthArray;
         private Main main_Window;
 
-        public ChooseSpeedAction(int currentLength,string direction,Main main_Window) 
+        public ChooseSpeedAction(string direction,Main main_Window) 
         {
             lengthArray = new int[]{1,2,3,4,5,6,8,10,12,16,20,24,32};
 
             this.main_Window = main_Window;
-            this.currentLength = currentLength;
             this.direction = direction;
         }
 
@@ -28,7 +26,7 @@ namespace TABit.Actions
         {
             try
             {
-                int currentIndex = Array.IndexOf(lengthArray, currentLength);
+                int currentIndex = Array.IndexOf(lengthArray, main_Window.currentLength);
 
                 if (direction == "-")
                 {
