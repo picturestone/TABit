@@ -15,6 +15,8 @@ namespace TABit
         int strings;
         int height;
 
+        int currentLength;
+
         Tuning TuningO = null;
         Settings SettingsO = null;
 
@@ -23,6 +25,8 @@ namespace TABit
 
         public Main()
         {
+            
+
             InitializeComponent();
 
             //2-8
@@ -106,8 +110,8 @@ namespace TABit
             KeyActionDict.Add(104, new Actions.WriteNoteAction(104));   //8 Num
             KeyActionDict.Add(105, new Actions.WriteNoteAction(105));   //9 Num
             KeyActionDict.Add(96, new Actions.WriteNoteAction(96));    //0 Num
-            KeyActionDict.Add(109, new Actions.ChooseSpeedAction());   //Minus Num
-            KeyActionDict.Add(107, new Actions.ChooseSpeedAction());   //Plus Num
+            KeyActionDict.Add(109, new Actions.ChooseSpeedAction(currentLength,"-"));   //Minus Num
+            KeyActionDict.Add(107, new Actions.ChooseSpeedAction(currentLength,"+"));   //Plus Num
 
             #endregion
 
@@ -178,6 +182,20 @@ namespace TABit
             else
             {
                 SettingsO.TopMost = true;
+            }
+        }
+
+        private void showpicture()
+        {
+            try
+            {
+                string filename = "_" + currentLength;
+                pbNote.Image = new Bitmap((Image)Properties.Resources.ResourceManager.GetObject(filename));
+                pbNote.Refresh();
+            }
+            catch
+            {
+
             }
         }
     }

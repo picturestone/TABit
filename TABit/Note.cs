@@ -28,5 +28,6 @@ namespace TABit
             this.stringnumber = stringnumber;
             this.startpoint = startpoint;
         }
+
     }
 }

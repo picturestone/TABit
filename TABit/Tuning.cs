@@ -35,8 +35,19 @@ namespace TABit
             string LabelName;
             string CBName;
             string[] CBText = new string[] {"C","C#","D","D#","E","F","F#","G","G#","A","A#","B"};
-            
-            for (int i = 1; i <= rows; i++)
+            //                              0    1    2   3    4   5   6    7   8    9   10   11
+            int i = 0;
+
+            Dictionary<int, int[]> stringNames = new Dictionary<int, int[]> () 
+            {
+                { 4, new int[] {7, 2, 9, 4}},
+                { 5, new int[] {4, 11, 7, 2, 9}},
+                { 6, new int[] {4, 11, 7, 2, 9, 4}},
+                { 7, new int[] {4, 11, 7, 2, 9, 4, 11}},
+                { 8, new int[] {4, 11, 7, 2, 9, 4, 11, 6}}
+            };
+
+            for (i = 1; i <= rows; i++)
             {
                 LabelName = "lRow" + i;
                 CBName = "cbRow" + i;
@@ -49,6 +60,8 @@ namespace TABit
                 Label.Anchor = AnchorStyles.Right;
                 Label.TextAlign = ContentAlignment.MiddleRight;
                 Label.Text = Convert.ToString(i+". String");
+                Label.Font = new Font("Century Gothic", 12);
+
 
                 tlp.Controls.Add(Label,0,i-1);
                 /////////////////////////////////////
@@ -61,6 +74,9 @@ namespace TABit
                 Combobox.Items.AddRange(CBText);
                 Combobox.SelectedIndex = 0;
                 Combobox.FlatStyle = FlatStyle.Flat;
+                Combobox.Font = new Font("Century Gothic", 12);
+
+                Combobox.SelectedIndex = stringNames[rows][i-1];
 
                 tlp.Controls.Add(Combobox, 1, i - 1);
                 /////////////////////////////////////
@@ -78,6 +94,7 @@ namespace TABit
             bCancel.Click += bCancel_Click;
             bCancel.FlatStyle = FlatStyle.Flat;
             bCancel.FlatAppearance.BorderColor = Color.DarkGray;
+            bCancel.Font = new Font("Century Gothic", 12);
 
             tlp.Controls.Add(bCancel, 1, rows + 1);
 
@@ -88,6 +105,7 @@ namespace TABit
             bSave.Click += bSave_Click;
             bSave.FlatStyle = FlatStyle.Flat;
             bSave.FlatAppearance.BorderColor = Color.DarkGray;
+            bSave.Font = new Font("Century Gothic", 12);
 
             tlp.Controls.Add(bSave, 0, rows + 1);
 

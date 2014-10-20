@@ -124,14 +124,8 @@
   <data name="note_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\note_32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="note_32_100" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\note_32-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="note_eighth" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\note_eighth.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="note_eighth_100" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\note_eighth-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="note_full" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\note_full.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -142,50 +136,11 @@
   <data name="note_half1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\note-half.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="note_half_100" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\note_half-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="note_quarter" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\note_quarter.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="note_quarter_100" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\note_quarter-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="note_quintol_32_100" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\note_quintol-32-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="note_quintol_eighth_100" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\note_quintol-eighth-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="note_quintol_half_100" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\note_quintol-half-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="note_quintol_quarter_100" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\note_quintol-quarter-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="note_quintol_sixteenth_100" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\note_quintol-sixteenth-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="note_sixteenth" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\note_sixteenth.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="note_sixteenth_100" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\note_sixteenth-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="note_triole_32_100" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\note_triole-32-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="note_triole_eigth_100" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\note_triole-eigth-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="note_triole_half_100" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\note_triole-half-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="note_triole_quarter_100" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\note_triole-quarter-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="note_triole_sixteenth_100" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\note_triole-sixteenth-100.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Open_6296" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Open_6296.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -207,5 +162,44 @@
   </data>
   <data name="v1_0_TABit_Logo256" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\v1.0-TABit_Logo256.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_10" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\10.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_20" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\20.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_24" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\24.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_32" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\32.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
