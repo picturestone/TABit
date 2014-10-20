@@ -163,7 +163,7 @@ namespace TABit
 
         private void bSave_Click(object sender, EventArgs e)
         {
-            Bar Testbar = new Bar(4, 4);
+            Bar Testbar = new Bar(Convert.ToInt16(cbTimingUpside.Text), Convert.ToInt16(cbTimingDownside.Text), this);
             tbWorkspace.Lines = Testbar.test_output();
         }
 
