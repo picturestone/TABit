@@ -19,6 +19,9 @@ namespace TABit
 
         Tuning TuningO = null;
         Settings SettingsO = null;
+        SaveFileDialog savetodialog;
+        OpenFileDialog opendialog;
+        PrintDialog printdialog;
 
         public Dictionary<int, TABit.Actions.KeyAction> KeyActionDict;
        
@@ -121,6 +124,28 @@ namespace TABit
             
 
             tbWorkspace.KeyDown += new KeyEventHandler(tbWorkspace_KeyDown);
+
+            //SaveFileDialog
+            savetodialog = new SaveFileDialog();
+            savetodialog.InitialDirectory = @"C:\";
+            savetodialog.Title = "Save to ...";
+            savetodialog.DefaultExt = "txt";
+            savetodialog.Filter = "Text files (*.txt)|*.txt";
+            ///////////////////////////////////////////////
+            
+            //OpenDialog
+            opendialog = new OpenFileDialog();
+            opendialog.InitialDirectory = @"C:\";
+            opendialog.Title = "Open ...";
+            opendialog.DefaultExt = "txt";
+            opendialog.Filter = "Text files (*.txt)|*.txt";
+            ///////////////////////////////////////////////
+
+            //PrintDialog
+            printdialog = new PrintDialog();
+            //printdialog.AllowSelection = true;
+            printdialog.AllowSomePages = true;
+            ///////////////////////////////////////////////
   
         }
 
@@ -200,6 +225,29 @@ namespace TABit
             {
 
             }
+        }
+
+        private void bSaveTo_Click(object sender, EventArgs e)
+        {
+            if (savetodialog.ShowDialog() == DialogResult.OK)
+            {
+                savetodialog.FileName = "";
+                tbWorkspace.Text += "Saved";
+            }
+        }
+
+        private void bOpen_Click(object sender, EventArgs e)
+        {
+            if (opendialog.ShowDialog() == DialogResult.OK)
+            {
+                opendialog.FileName = "";
+                tbWorkspace.Text += "Opened";
+            }
+        }
+
+        private void bPrint_Click(object sender, EventArgs e)
+        {
+            printdialog.ShowDialog();
         }
     }
 }

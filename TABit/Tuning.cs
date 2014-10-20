@@ -95,6 +95,7 @@ namespace TABit
             bCancel.FlatStyle = FlatStyle.Flat;
             bCancel.FlatAppearance.BorderColor = Color.DarkGray;
             bCancel.Font = new Font("Century Gothic", 12);
+            bCancel.BackColor = SystemColors.Control;
 
             tlp.Controls.Add(bCancel, 1, rows + 1);
 
@@ -106,6 +107,7 @@ namespace TABit
             bSave.FlatStyle = FlatStyle.Flat;
             bSave.FlatAppearance.BorderColor = Color.DarkGray;
             bSave.Font = new Font("Century Gothic", 12);
+            bSave.BackColor = SystemColors.Control;
 
             tlp.Controls.Add(bSave, 0, rows + 1);
 
