@@ -39,10 +39,6 @@ namespace TABit
              */
             notes.Add(new Note(0, 8, 2, 2));
             notes.Add(new Note(5, 12, 1, 2));
-            //notes.Add(new Note(5, 4, 1, 3));
-            //notes.Add(new Note(5, 2, 6, 1));
-            //notes.Add(new Note(10, 2, 3, 2));
-            //notes.Add(new Note(5, 2, 3, 3));
 
             List<int> note_lengths = get_note_lengths();
             int bar_length = get_bar_length(note_lengths);
@@ -95,7 +91,6 @@ namespace TABit
         public Dictionary<int, int> get_written_length_of_each_note(int bar_length, List<int> notelengths)
         {
             Dictionary<int, int> writtenlengths = new Dictionary<int, int>();
-
             foreach (int notelength in notelengths)
             {
                 writtenlengths[notelength] = bar_length / notelength;
@@ -104,19 +99,18 @@ namespace TABit
             return writtenlengths;
         }
 
-        String[] string_output(Dictionary<int, int> written_lengths, int number_of_strings, int bar_length)
+        public String[] string_output(Dictionary<int, int> written_lengths, int number_of_strings, int bar_length)
         {
             String[] output = new string[number_of_strings];
 
 
-            //TODO: make the bar-checker as a function. checks if bar is too long and if the startpoints of two notes on the same string are the same
-            foreach (Note note in notes)
+            //checks if bar is to long
+            if (is_written_bar_ok(bar_length) == false)
             {
-                if ((note.fret <= 9 && note.fret >= 0 && note.startpoint > bar_length - 1) || (note.fret > 9 && note.startpoint >= bar_length - 1))
-                {
-                    throw new Exception("Notes in bar are to long");
-                }
+                throw new Exception("Bar is to long or consisting of notes not allowed");
             }
+            //TODO: use the are_notes_in_bar_ok function too
+
 
             for (int string_number = 1; string_number <= number_of_strings; string_number++)
             {
@@ -130,8 +124,7 @@ namespace TABit
                     }
                 }
 
-                //add "|" at beginning of the bar
-                output[string_number - 1] += "|";
+                 
                 if (notes_on_string.Count() > 0)
                 {
                     for (int character_number = 0; character_number <= bar_length - 1; character_number++)
@@ -177,6 +170,41 @@ namespace TABit
 
             //output[0] = "Sis das not wörk jät. Plies weit antill ai häf finischt seh fanktschen";
             return output;
+        }
+
+        public bool is_written_bar_ok(int bar_length)
+        {
+            bool bar_is_ok = true;
+
+            foreach (Note note in notes)
+            {
+                if ((note.fret <= 9 && note.fret >= 0 && note.startpoint > bar_length - 1) || (note.fret > 9 && note.startpoint >= bar_length - 1))
+                {
+                    bar_is_ok = false;
+                }
+            }
+
+            return bar_is_ok;
+        }
+
+        public bool are_notes_in_bar_ok(Dictionary<int, int> written_lengths, int number_of_strings)
+        {
+            /*
+             * TODO:
+             * Make a function which checks if the startpoint of a note colides with the length of the note before
+             * 
+             * 
+             * 
+             */
+            bool bar_is_ok = true;
+            int[] length_on_string = new int[number_of_strings];
+
+            foreach (Note note in notes)
+            {
+            //    length_on_string[note.stringnumber] = written_lengths[note.length]
+            }
+
+            return bar_is_ok;
         }
     }
 }
