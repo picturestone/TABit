@@ -27,11 +27,11 @@ namespace TABit.Actions
 
             if (PressedKey == "Right" || PressedKey== "Space")
             {
-                box.Select(CurrentPosition+1, 0);
+                box.Select(CurrentPosition, 0);
             }
             else if (PressedKey == "Left")
             {
-                box.Select(CurrentPosition-1, 0);
+                box.Select(CurrentPosition, 0);
             }
             
         }

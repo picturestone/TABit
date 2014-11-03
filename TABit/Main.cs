@@ -30,7 +30,7 @@ namespace TABit
         public Main()
         {
 
-            
+
             InitializeComponent();
 
             //2-8
@@ -89,18 +89,18 @@ namespace TABit
             KeyActionDict.Add(48, new Actions.WriteNoteAction(48));    //0 oben
             KeyActionDict.Add(8, new Actions.DeleteAction(8));     //Backslash
             KeyActionDict.Add(508, new Actions.DeleteAction(508));   //Shift + Backslash
-            KeyActionDict.Add(81, new Actions.ChooseStringAction());    //q       
-            KeyActionDict.Add(87, new Actions.ChooseStringAction());    //w 
-            KeyActionDict.Add(69, new Actions.ChooseStringAction());    //e 
-            KeyActionDict.Add(82, new Actions.ChooseStringAction());    //r
-            KeyActionDict.Add(84, new Actions.ChooseStringAction());    //t  
-            KeyActionDict.Add(90, new Actions.ChooseStringAction());    //z
-            KeyActionDict.Add(89, new Actions.ChooseStringAction());    //y
+            KeyActionDict.Add(81, new Actions.ChooseStringAction(81));    //q       
+            KeyActionDict.Add(87, new Actions.ChooseStringAction(87));    //w 
+            KeyActionDict.Add(69, new Actions.ChooseStringAction(69));    //e 
+            KeyActionDict.Add(82, new Actions.ChooseStringAction(82));    //r
+            KeyActionDict.Add(84, new Actions.ChooseStringAction(84));    //t  
+            KeyActionDict.Add(90, new Actions.ChooseStringAction(90));    //z
+            KeyActionDict.Add(89, new Actions.ChooseStringAction(89));    //y
             KeyActionDict.Add(88, new Actions.WriteNoteAction(88));    //x
             KeyActionDict.Add(33, new Actions.ChooseLineAction());    //bild auf
             KeyActionDict.Add(34, new Actions.ChooseLineAction());    //bild runter
-            KeyActionDict.Add(38, new Actions.ChooseStringAction());    //Pfeil rauf
-            KeyActionDict.Add(40, new Actions.ChooseStringAction());    //Pfeil runter
+            KeyActionDict.Add(38, null);    //Pfeil rauf
+            KeyActionDict.Add(40, null);    //Pfeil runter
             KeyActionDict.Add(37, new Actions.ChooseNoteAction(37));    //Pfeil links
             KeyActionDict.Add(39, new Actions.ChooseNoteAction(39));    //Pfeil rechts
             KeyActionDict.Add(32, new Actions.ChooseNoteAction(32));    //Space
@@ -156,6 +156,7 @@ namespace TABit
 
         private void tbWorkspace_KeyDown(object sender, KeyEventArgs e)
         {
+            
             try
             {
                 int KeyNumberGot = KeyDetection.Detection(sender, e);
