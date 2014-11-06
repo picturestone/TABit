@@ -24,7 +24,7 @@ namespace TABit.Actions
             
             var currentLine = box.GetLineFromCharIndex(box.SelectionStart);
 
-            //int Blocklength = Abstand + Linenumber;
+            //int Blocklength = line_between_blocks + string_count;
 
 
             //int currentBlock = Math.Ceiling(currentLine/Blocklength);
@@ -59,9 +59,9 @@ namespace TABit.Actions
             }
 
 
-            //if (CurrentPositionInBlock >= Linenumber)
+            //if (CurrentPositionInBlock >= string_count)
             //{
-            //    int DifLines = CurrentPositionInBlock - Linenumber;
+            //    int DifLines = CurrentPositionInBlock - string_count;
             //    if (Times > 0)
             //    {
             //        Times = Times + DifLines;
