@@ -28,11 +28,11 @@ namespace TABit
 
             if(TABit.Properties.Settings.Default.SLinesUser == "")
             {
-                tbLinesSpace.Text = TABit.Properties.Settings.Default.SLinesUser;
+                tbLinesSpace.Text = TABit.Properties.Settings.Default.SLinesDefault;
             }
             else
             {
-                tbLinesSpace.Text = TABit.Properties.Settings.Default.SLinesDefault;
+                tbLinesSpace.Text = TABit.Properties.Settings.Default.SLinesUser;
             }
         }
 

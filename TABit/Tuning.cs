@@ -7,12 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Collections.Specialized;
 
 namespace TABit
 {
     public partial class Tuning : Form
     {
         int rows;
+        ComboBox[] cbArray;
 
         public Tuning(int strings)
         {
@@ -21,6 +23,7 @@ namespace TABit
 
 
             rows = strings;
+            cbArray = new ComboBox[rows];
 
             TableLayoutPanel tlp = new TableLayoutPanel();
             tlp.RowCount = rows + 2;
@@ -76,9 +79,10 @@ namespace TABit
                 Combobox.FlatStyle = FlatStyle.Flat;
                 Combobox.Font = new Font("Century Gothic", 12);
 
-                Combobox.SelectedIndex = stringNames[rows][i-1];
+                Combobox.SelectedIndex = stringNames[rows][i - 1];
 
                 tlp.Controls.Add(Combobox, 1, i - 1);
+                cbArray[i-1] = Combobox;
                 /////////////////////////////////////
             }
 
@@ -123,7 +127,7 @@ namespace TABit
 
         void bSave_Click(object sender, EventArgs e)
         {
-            
+            this.Close();
         }
     }
 }
