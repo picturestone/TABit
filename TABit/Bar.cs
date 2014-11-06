@@ -11,13 +11,15 @@ namespace TABit
         public List<Note> notes;
         public int[] time_signature = new int[2];
         public Main main_window;
+        public bool is_drawn;
 
-        public Bar(int time_signatur_upside, int time_signature_downside, Main main_window)
+        public Bar(int time_signatur_upside, int time_signature_downside, Main main_window, bool is_drawn)
         {
             this.time_signature[0] = time_signatur_upside;
             this.time_signature[1] = time_signature_downside;
             this.notes = new List<Note>();
             this.main_window = main_window;
+            this.is_drawn = is_drawn;
         }
 
         public string[] test_output()
