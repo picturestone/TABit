@@ -17,5 +17,26 @@ namespace TABit
             }
             return Convert.ToInt16(user_lines_between_blocks);
         }
+
+        public static int get_chars_per_string()
+        {
+            string user_chars_per_string = TABit.Properties.Settings.Default.SCharsUser;
+            if (user_chars_per_string == "")
+            {
+                return Convert.ToInt16(TABit.Properties.Settings.Default.SCharsDefault);
+            }
+            return Convert.ToInt16(user_chars_per_string);
+        }
+
+        //TODO get timing upside and downside from config
+        //public static int get_timing_upside()
+        //{
+        //    return Convert.ToInt16(cbTimingUpside.Text);
+        //}
+
+        //public static int get_timing_upside()
+        //{
+        //    return Convert.ToInt16(cbTimingUpside.Text);
+        //}
     }
 }

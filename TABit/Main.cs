@@ -23,13 +23,14 @@ namespace TABit
         SaveFileDialog savetodialog;
         OpenFileDialog opendialog;
         PrintDialog printdialog;
+        Sheet notesheet;
 
         public Dictionary<int, TABit.Actions.KeyAction> KeyActionDict;
        
 
         public Main()
         {
-
+            
 
             InitializeComponent();
 
@@ -147,6 +148,10 @@ namespace TABit
             printdialog.AllowSomePages = true;
             ///////////////////////////////////////////////
   
+
+
+            //Make a new Sheet
+            notesheet = new Sheet(Convert.ToInt16(cbStrings.Text), Config.get_chars_per_string(), Config.get_lines_between_blocks(), this);
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -196,6 +201,7 @@ namespace TABit
 
         private void bSave_Click(object sender, EventArgs e)
         {
+            //notesheet.add_bar(    todo: use this function
             Bar Testbar = new Bar(Convert.ToInt16(cbTimingUpside.Text), Convert.ToInt16(cbTimingDownside.Text), this, false);
             tbWorkspace.Lines = Testbar.test_output();
         }
