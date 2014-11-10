@@ -11,60 +11,67 @@ namespace TABit.Actions
     {
         public int ToWrite;
         public int Times = 0;
+        decimal linesBetween;
+        int strings;
 
-        public ChooseLineAction(int ToWrite) 
+        public ChooseLineAction(int ToWrite, int strings) 
         {
             this.ToWrite = ToWrite;
+            this.strings = strings;
         }
 
 
         public void doKeyAction(TextBox box)
         {
-            var currentLine = box.GetLineFromCharIndex(box.SelectionStart);
+            //strings = Config.get_strings();
 
-            if (TABit.Properties.Settings.Default.SLinesUser == "")
-            {
-                int linesBetween = Convert.ToInt32(TABit.Properties.Settings.Default.SLinesUser);
-            }
-            else
-            {
-                int linesBetween = Convert.ToInt32(TABit.Properties.Settings.Default.SLinesDefault);
-            }
+            var currentLine = box.GetLineFromCharIndex(box.SelectionStart)+1;
 
-            //int Blocklength = linesBetween + string_count;
+            linesBetween = Config.get_lines_between_blocks();     
 
 
-            //int currentBlock = Math.Ceiling(currentLine/Blocklength);
+            decimal Blocklength = linesBetween + strings;
 
-            //int CurrentPositionInBlock = Convert.ToInt32(currentLine - (Math.Floor(Convert.ToDecimal(currentLine/Blocklength)) *Blocklength));
+
+            int currentBlock = Convert.ToInt32(Math.Ceiling(currentLine/Blocklength));
+
+            int CurrentPositionInBlock = Convert.ToInt32(currentLine - (Math.Floor(Convert.ToDecimal(currentLine/Blocklength)) *Blocklength));
 
          
 
             if (ToWrite == 33)  //Line Up
             {
-                //Times = Blocklength;                 
+                Times = Convert.ToInt32(Blocklength);                 
             }
             else if(ToWrite == 34)   //Line Down
             {
-                //Times = -Blocklength;
+                Times = Convert.ToInt32(-Blocklength);
             }
-     
 
 
-            //if (CurrentPositionInBlock >= Linenumber)
-            //{
-            //    int DifLines = CurrentPositionInBlock - string_count;
-            //    if (Times > 0)
-            //    {
-            //        Times = Times + DifLines;
-            //    }
-            //    else
-            //    {
-            //        Times = Times - DifLines;
-            //    }
-            //}
-            //else
-            //{
+
+            if (CurrentPositionInBlock >= strings)
+            {
+                int DifLines = CurrentPositionInBlock - strings;
+                if (Times > 0)
+                {
+                    Times = Times + DifLines;
+                    for (int i = 0; i != Times; i++)
+                    {
+                        doUp(box);
+                    }
+                }
+                else
+                {
+                    Times = Times - DifLines;
+                    for (int i = 0; i != Times; i--)
+                    {
+                        doDown(box);
+                    }
+                }
+            }
+            else
+            {
                 if (Times > 0)
                 {
                     for (int i = 0; i != Times; i++)
@@ -79,7 +86,7 @@ namespace TABit.Actions
                         doDown(box);
                     }
                 }
-            //}
+            }
 
         }
 
