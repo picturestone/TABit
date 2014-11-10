@@ -12,12 +12,13 @@ namespace TABit.Actions
            
         public OpenMenueAction() 
         {
-        
+          
         }
 
 
         public void doKeyAction(TextBox box)
         {
+
         }
     }
 }

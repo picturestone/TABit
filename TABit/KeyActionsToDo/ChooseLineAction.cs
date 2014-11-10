@@ -22,7 +22,16 @@ namespace TABit.Actions
         {
             var currentLine = box.GetLineFromCharIndex(box.SelectionStart);
 
-            //int Blocklength = lines_between_blocks + string_count;
+            if (TABit.Properties.Settings.Default.SLinesUser == "")
+            {
+                int linesBetween = Convert.ToInt32(TABit.Properties.Settings.Default.SLinesUser);
+            }
+            else
+            {
+                int linesBetween = Convert.ToInt32(TABit.Properties.Settings.Default.SLinesDefault);
+            }
+
+            //int Blocklength = linesBetween + string_count;
 
 
             //int currentBlock = Math.Ceiling(currentLine/Blocklength);

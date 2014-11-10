@@ -89,13 +89,13 @@ namespace TABit
             KeyActionDict.Add(48, new Actions.WriteNoteAction(48));    //0 oben
             KeyActionDict.Add(8, new Actions.DeleteAction(8));     //Backslash
             KeyActionDict.Add(508, new Actions.DeleteAction(508));   //Shift + Backslash
-            KeyActionDict.Add(81, new Actions.ChooseStringAction(81));    //q       
-            KeyActionDict.Add(87, new Actions.ChooseStringAction(87));    //w 
-            KeyActionDict.Add(69, new Actions.ChooseStringAction(69));    //e 
-            KeyActionDict.Add(82, new Actions.ChooseStringAction(82));    //r
-            KeyActionDict.Add(84, new Actions.ChooseStringAction(84));    //t  
-            KeyActionDict.Add(90, new Actions.ChooseStringAction(90));    //z
-            KeyActionDict.Add(89, new Actions.ChooseStringAction(89));    //y
+            KeyActionDict.Add(81, new Actions.ChooseStringAction(81,Convert.ToInt16(cbStrings.Text)));    //q       
+            KeyActionDict.Add(87, new Actions.ChooseStringAction(87,Convert.ToInt16(cbStrings.Text)));    //w 
+            KeyActionDict.Add(69, new Actions.ChooseStringAction(69,Convert.ToInt16(cbStrings.Text)));    //e 
+            KeyActionDict.Add(82, new Actions.ChooseStringAction(82,Convert.ToInt16(cbStrings.Text)));    //r
+            KeyActionDict.Add(84, new Actions.ChooseStringAction(84,Convert.ToInt16(cbStrings.Text)));    //t  
+            KeyActionDict.Add(90, new Actions.ChooseStringAction(90,Convert.ToInt16(cbStrings.Text)));    //z
+            KeyActionDict.Add(89, new Actions.ChooseStringAction(89,Convert.ToInt16(cbStrings.Text)));    //y
             KeyActionDict.Add(88, new Actions.WriteNoteAction(88));    //x
             KeyActionDict.Add(33, new Actions.ChooseLineAction(33));    //bild auf
             KeyActionDict.Add(34, new Actions.ChooseLineAction(34));    //bild runter

@@ -12,56 +12,77 @@ namespace TABit.Actions
     {
         public int ToWrite;
         public int Times = 0;
+        public int strings;
+        int linesBetween;
+        int LineLength;
 
-        public ChooseStringAction(int ToWrite) 
+        public ChooseStringAction(int ToWrite, int strings) 
         {
             this.ToWrite = ToWrite;
+            this.strings = strings;
         }
 
 
         public void doKeyAction(TextBox box)
         {
-            
-            var currentLine = box.GetLineFromCharIndex(box.SelectionStart);
+            //if (TABit.Properties.Settings.Default.SCharsUser =="")
+            //{
+            //    int LineLength = Convert.ToInt32(TABit.Properties.Settings.Default.SCharsDefault);
+            //}
+            //else
+            //{
 
-            //int Blocklength = line_between_blocks + string_count;
+            //}
+
+            //var currentLine = box.GetLineFromCharIndex(box.SelectionStart);
+
+            //if (TABit.Properties.Settings.Default.SLinesUser == "")
+            //{
+            //    linesBetween = Convert.ToInt32(TABit.Properties.Settings.Default.SLinesUser);
+            //}
+            //else
+            //{
+            //    linesBetween = Convert.ToInt32(TABit.Properties.Settings.Default.SLinesDefault);
+            //}
+
+            //int Blocklength = linesBetween + strings;
 
 
-            //int currentBlock = Math.Ceiling(currentLine/Blocklength);
+            //int currentBlock = Convert.ToInt32(Math.Ceiling(Convert.ToDecimal(currentLine/Blocklength)));
 
             //int CurrentPositionInBlock = Convert.ToInt32(currentLine - (Math.Floor(Convert.ToDecimal(currentLine/Blocklength)) *Blocklength));
 
          
 
-            if (ToWrite == 81)
-            {
-                //Times = CurrentPositionInBlock - 1;   //1, weil es q ist (String 1)                        
-            }
-            else if(ToWrite == 87)
-            {
-                //Times = CurrentPositionInBlock - 2;
-            }
-            else if (ToWrite ==69)
-            {
-                //Times = CurrentPositionInBlock - 3;
-            }
-            else if (ToWrite == 82)
-            {
-                //Times = CurrentPositionInBlock - 4;
-            }
-            else if (ToWrite == 64)
-            {
-                //Times = CurrentPositionInBlock - 5;
-            }
-            else if (ToWrite == 89 || ToWrite == 90)
-            {
-                //Times = CurrentPositionInBlock - 6;
-            }
-
-
-            //if (CurrentPositionInBlock >= string_count)
+            //if (ToWrite == 81)
             //{
-            //    int DifLines = CurrentPositionInBlock - string_count;
+            //    Times = CurrentPositionInBlock - 1;   //1, weil es q ist (String 1)                        
+            //}
+            //else if(ToWrite == 87)
+            //{
+            //    Times = CurrentPositionInBlock - 2;
+            //}
+            //else if (ToWrite ==69)
+            //{
+            //    Times = CurrentPositionInBlock - 3;
+            //}
+            //else if (ToWrite == 82)
+            //{
+            //    Times = CurrentPositionInBlock - 4;
+            //}
+            //else if (ToWrite == 64)
+            //{
+            //    Times = CurrentPositionInBlock - 5;
+            //}
+            //else if (ToWrite == 89 || ToWrite == 90)
+            //{
+            //    Times = CurrentPositionInBlock - 6;
+            //}
+
+
+            //if (CurrentPositionInBlock >= strings)
+            //{
+            //    int DifLines = CurrentPositionInBlock - strings;
             //    if (Times > 0)
             //    {
             //        Times = Times + DifLines;
@@ -73,20 +94,20 @@ namespace TABit.Actions
             //}
             //else
             //{
-                if (Times > 0)
-                {
-                    for (int i = 0; i != Times; i++)
-                    {
-                        doUp(box);
-                    }
-                }
-                else
-                {
-                    for (int i = 0; i != Times; i--)
-                    {
-                        doDown(box);
-                    }
-                }
+            //    if (Times > 0)
+            //    {
+            //        for (int i = 0; i != Times; i++)
+            //        {
+            //            doUp(box);
+            //        }
+            //    }
+            //    else
+            //    {
+            //        for (int i = 0; i != Times; i--)
+            //        {
+            //            doDown(box);
+            //        }
+            //    }
             //}
 
         }
