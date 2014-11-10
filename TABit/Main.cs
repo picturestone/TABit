@@ -8,13 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
+using System.Drawing.Printing;
+using System.Configuration;
 
 namespace TABit
 {
     public partial class Main : Form
-    {
+    {  
         int strings;
         int height;
+        string savetopath;
 
         public int currentLength;
 
@@ -143,7 +146,7 @@ namespace TABit
 
             //PrintDialog
             printdialog = new PrintDialog();
-            //printdialog.AllowSelection = true;
+            printdialog.AllowSelection = true;
             printdialog.AllowSomePages = true;
             ///////////////////////////////////////////////
   
@@ -198,6 +201,30 @@ namespace TABit
         {
             Bar Testbar = new Bar(Convert.ToInt16(cbTimingUpside.Text), Convert.ToInt16(cbTimingDownside.Text), this, false);
             tbWorkspace.Lines = Testbar.test_output();
+
+            //dia Region isch uskommentiert. widr iha tua, wenn ihr den Button nöma zum test bruchan
+            #region Save
+            /*if (savetopath == null)
+            {
+             * //Verweis auf SaveTo-Methode von Save-To Button, da gleiche Funktion
+                bSaveTo_Click(null,null);
+            }
+            else
+            {
+                try
+                {
+                    StreamWriter sw = new StreamWriter(savetopath);
+                    sw.Write(tbWorkspace.Text);
+                    sw.Close();
+
+                    MessageBox.Show("Document saved", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch
+                {
+                    MessageBox.Show("Error! Document not saved!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }*/
+            #endregion
         }
 
         private void bSettings_Click(object sender, EventArgs e)
@@ -232,8 +259,21 @@ namespace TABit
         {
             if (savetodialog.ShowDialog() == DialogResult.OK)
             {
+                try
+                {
+                    StreamWriter sw = new StreamWriter(savetodialog.FileName);
+                    savetopath = savetodialog.FileName;
+                    sw.Write(tbWorkspace.Text);
+                    sw.Close();
+
+                    MessageBox.Show("Document saved", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch
+                {
+                    MessageBox.Show("Error! Document not saved!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+
                 savetodialog.FileName = "";
-                tbWorkspace.Text += "Saved";
             }
         }
 
@@ -242,7 +282,6 @@ namespace TABit
             if (opendialog.ShowDialog() == DialogResult.OK)
             {
                 //opendialog.FileName = "";
-                tbWorkspace.Text += "Opened";
 
                 using (StreamReader sr = new StreamReader(opendialog.FileName))
                 {
@@ -257,12 +296,60 @@ namespace TABit
 
         private void bPrint_Click(object sender, EventArgs e)
         {
-            printdialog.ShowDialog();
+            PrintDocument printdocument = new PrintDocument();
+            printdocument.DocumentName = "Tabs";
+            printdialog.Document = printdocument;
+            
+
+
+            printdocument.PrintPage += delegate(object sender1, PrintPageEventArgs e1)
+            {
+                e1.PageSettings.PaperSize = new PaperSize("a4", 827, 1169); //Größe A4 in 1/100 Zoll
+                //e1.PageSettings.Margins = new Margins(10, 10, 10, 10);
+
+                e1.Graphics.DrawString(tbWorkspace.Text, new Font("Courier New", 10), new SolidBrush(Color.Black), e1.MarginBounds);
+            };
+
+            try
+            {
+                if(printdialog.ShowDialog() == DialogResult.OK)
+                {
+                    printdocument.Print();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Could not print the document" + ex, "Printing Error",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Error,
+                    MessageBoxDefaultButton.Button1);
+            }
+
         }
 
-        private void tableLayoutPanel2_Paint(object sender, PaintEventArgs e)
+        private void bNew_Click(object sender, EventArgs e)
         {
+            if ((tbWorkspace.Text != "") || (tbWorkspace.Text != null))
+            {
+                try
+                {
+                    DialogResult result = MessageBox.Show("Save file?", "Save?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
+                    if (result == DialogResult.Yes)
+                    {
+                        bSaveTo_Click(null, null);
+                        tbWorkspace.Text = "";
+                    }
+                    else if (result == DialogResult.No)
+                    {
+                        tbWorkspace.Text = "";
+                    }
+                }
+                catch
+                {
+                    MessageBox.Show("Could not load a new document", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
         }
     }
 }
