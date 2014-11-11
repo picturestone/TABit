@@ -205,8 +205,10 @@ namespace TABit
         private void bSave_Click(object sender, EventArgs e)
         {
             //notesheet.add_bar(    todo: use this function
-            Bar Testbar = new Bar(Convert.ToInt16(cbTimingUpside.Text), Convert.ToInt16(cbTimingDownside.Text), this, false);
-            tbWorkspace.Lines = Testbar.test_output();
+            notesheet.add_bar(Config.get_timing_upside(this), Config.get_timing_downside(this));
+            tbWorkspace.Lines = notesheet.get_sheet_text();
+            //Bar Testbar = new Bar(Convert.ToInt16(cbTimingUpside.Text), Convert.ToInt16(cbTimingDownside.Text), this, false);
+            //tbWorkspace.Lines = Testbar.test_output();
 
             //dia Region isch uskommentiert. widr iha tua, wenn ihr den Button nöma zum test bruchan
             #region Save

@@ -29,14 +29,14 @@ namespace TABit
         }
 
         //TODO get timing upside and downside from config
-        //public static int get_timing_upside()
-        //{
-        //    return Convert.ToInt16(cbTimingUpside.Text);
-        //}
+        public static int get_timing_upside(Main main)
+        {
+            return Convert.ToInt16(main.cbTimingUpside.Text);
+        }
 
-        //public static int get_timing_upside()
-        //{
-        //    return Convert.ToInt16(cbTimingUpside.Text);
-        //}
+        public static int get_timing_downside(Main main)
+        {
+            return Convert.ToInt16(main.cbTimingDownside.Text);
+        }
     }
 }
