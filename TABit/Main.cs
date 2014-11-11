@@ -77,10 +77,10 @@ namespace TABit
 
             #region KeyActionDic
             KeyActionDict.Add(27,new Actions.OpenMenueAction());     //Escape
-            KeyActionDict.Add(112, new Actions.ChooseBarAction());   //F1 
-            KeyActionDict.Add(113, new Actions.ChooseBarAction());   //F2
-            KeyActionDict.Add(114, new Actions.ChooseBarAction());   //F3
-            KeyActionDict.Add(115, new Actions.ChooseBarAction());   //F4
+            KeyActionDict.Add(112, new Actions.ChooseBarAction(112));   //F1 
+            KeyActionDict.Add(113, new Actions.ChooseBarAction(113));   //F2
+            KeyActionDict.Add(114, new Actions.ChooseBarAction(114));   //F3
+            KeyActionDict.Add(115, new Actions.ChooseBarAction(115));   //F4
             KeyActionDict.Add(49, new Actions.WriteNoteAction(49));    //1 oben
             KeyActionDict.Add(50, new Actions.WriteNoteAction(50));    //2 oben       
             KeyActionDict.Add(51, new Actions.WriteNoteAction(51));    //3 oben   
@@ -101,8 +101,8 @@ namespace TABit
             KeyActionDict.Add(90, new Actions.ChooseStringAction(90,Convert.ToInt16(cbStrings.Text)));    //z
             KeyActionDict.Add(89, new Actions.ChooseStringAction(89,Convert.ToInt16(cbStrings.Text)));    //y
             KeyActionDict.Add(88, new Actions.WriteNoteAction(88));    //x
-            KeyActionDict.Add(33, new Actions.ChooseLineAction(33));    //bild auf
-            KeyActionDict.Add(34, new Actions.ChooseLineAction(34));    //bild runter
+            KeyActionDict.Add(33, new Actions.ChooseLineAction(33, Convert.ToInt16(cbStrings.Text)));    //bild auf
+            KeyActionDict.Add(34, new Actions.ChooseLineAction(34, Convert.ToInt16(cbStrings.Text)));    //bild runter
             KeyActionDict.Add(38, null);    //Pfeil rauf
             KeyActionDict.Add(40, null);    //Pfeil runter
             KeyActionDict.Add(37, new Actions.ChooseNoteAction(37));    //Pfeil links

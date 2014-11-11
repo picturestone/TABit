@@ -13,8 +13,8 @@ namespace TABit.Actions
         public int ToWrite;
         public int Times = 0;
         public int strings;
-        int linesBetween;
-        int LineLength;
+        decimal linesBetween;
+  
 
         public ChooseStringAction(int ToWrite, int strings) 
         {
@@ -25,90 +25,86 @@ namespace TABit.Actions
 
         public void doKeyAction(TextBox box)
         {
-            //if (TABit.Properties.Settings.Default.SCharsUser =="")
-            //{
-            //    int LineLength = Convert.ToInt32(TABit.Properties.Settings.Default.SCharsDefault);
-            //}
-            //else
-            //{
+            //strings = Config.get_strings();
 
-            //}
+            var currentLine = box.GetLineFromCharIndex(box.SelectionStart)+1;
 
-            //var currentLine = box.GetLineFromCharIndex(box.SelectionStart);
+            //currentLine = Convert.ToInt32(box.SelectionStart - (Math.Floor(Convert.ToDecimal(box.SelectionStart/LineLength))*LineLength));
 
-            //if (TABit.Properties.Settings.Default.SLinesUser == "")
-            //{
-            //    linesBetween = Convert.ToInt32(TABit.Properties.Settings.Default.SLinesUser);
-            //}
-            //else
-            //{
-            //    linesBetween = Convert.ToInt32(TABit.Properties.Settings.Default.SLinesDefault);
-            //}
+            linesBetween = Config.get_lines_between_blocks();
 
-            //int Blocklength = linesBetween + strings;
+            decimal Blocklength = linesBetween + strings;
 
 
-            //int currentBlock = Convert.ToInt32(Math.Ceiling(Convert.ToDecimal(currentLine/Blocklength)));
+            int currentBlock = Convert.ToInt32(Math.Ceiling(Convert.ToDecimal(currentLine / Blocklength)));
 
-            //int CurrentPositionInBlock = Convert.ToInt32(currentLine - (Math.Floor(Convert.ToDecimal(currentLine/Blocklength)) *Blocklength));
-
-         
-
-            //if (ToWrite == 81)
-            //{
-            //    Times = CurrentPositionInBlock - 1;   //1, weil es q ist (String 1)                        
-            //}
-            //else if(ToWrite == 87)
-            //{
-            //    Times = CurrentPositionInBlock - 2;
-            //}
-            //else if (ToWrite ==69)
-            //{
-            //    Times = CurrentPositionInBlock - 3;
-            //}
-            //else if (ToWrite == 82)
-            //{
-            //    Times = CurrentPositionInBlock - 4;
-            //}
-            //else if (ToWrite == 64)
-            //{
-            //    Times = CurrentPositionInBlock - 5;
-            //}
-            //else if (ToWrite == 89 || ToWrite == 90)
-            //{
-            //    Times = CurrentPositionInBlock - 6;
-            //}
+            int CurrentPositionInBlock = Convert.ToInt32(currentLine - (Math.Floor(Convert.ToDecimal(currentLine / Blocklength)) * Blocklength));
 
 
-            //if (CurrentPositionInBlock >= strings)
-            //{
-            //    int DifLines = CurrentPositionInBlock - strings;
-            //    if (Times > 0)
-            //    {
-            //        Times = Times + DifLines;
-            //    }
-            //    else
-            //    {
-            //        Times = Times - DifLines;
-            //    }
-            //}
-            //else
-            //{
-            //    if (Times > 0)
-            //    {
-            //        for (int i = 0; i != Times; i++)
-            //        {
-            //            doUp(box);
-            //        }
-            //    }
-            //    else
-            //    {
-            //        for (int i = 0; i != Times; i--)
-            //        {
-            //            doDown(box);
-            //        }
-            //    }
-            //}
+
+            if (ToWrite == 81)
+            {
+                Times = CurrentPositionInBlock - 1;   //1, weil es q ist (String 1)                        
+            }
+            else if (ToWrite == 87)
+            {
+                Times = CurrentPositionInBlock - 2;
+            }
+            else if (ToWrite == 69)
+            {
+                Times = CurrentPositionInBlock - 3;
+            }
+            else if (ToWrite == 82)
+            {
+                Times = CurrentPositionInBlock - 4;
+            }
+            else if (ToWrite == 84)
+            {
+                Times = CurrentPositionInBlock - 5;
+            }
+            else if (ToWrite == 89 || ToWrite == 90)
+            {
+                Times = CurrentPositionInBlock - 6;
+            }
+
+
+            if (CurrentPositionInBlock >= strings)
+            {
+                int DifLines = CurrentPositionInBlock - strings;
+                if (Times > 0)
+                {
+                    Times = Times + DifLines;
+                    for (int i = 0; i != Times; i++)
+                    {
+                        doUp(box);
+                    }
+                }
+                else
+                {
+                    Times = Times - DifLines;
+                    for (int i = 0; i != Times; i--)
+                    {
+                        doDown(box);
+                    }
+                }
+            }
+            else
+            {
+                if (Times > 0)
+                {
+                    for (int i = 0; i != Times; i++)
+                    {
+                        doUp(box);
+                    }
+                }
+                else
+                {
+                    for (int i = 0; i != Times; i--)
+                    {
+                        doDown(box);
+                    }
+                }
+            }
 
         }
 
