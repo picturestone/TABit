@@ -70,7 +70,7 @@
             this.bSaveSettings.Location = new System.Drawing.Point(438, 445);
             this.bSaveSettings.Name = "bSaveSettings";
             this.bSaveSettings.Size = new System.Drawing.Size(140, 40);
-            this.bSaveSettings.TabIndex = 2;
+            this.bSaveSettings.TabIndex = 1;
             this.bSaveSettings.Text = "Save";
             this.bSaveSettings.UseVisualStyleBackColor = false;
             this.bSaveSettings.Click += new System.EventHandler(this.bSave_Click);
@@ -84,7 +84,7 @@
             this.bCancelSettings.Location = new System.Drawing.Point(584, 445);
             this.bCancelSettings.Name = "bCancelSettings";
             this.bCancelSettings.Size = new System.Drawing.Size(140, 40);
-            this.bCancelSettings.TabIndex = 3;
+            this.bCancelSettings.TabIndex = 1;
             this.bCancelSettings.Text = "Cancel";
             this.bCancelSettings.UseVisualStyleBackColor = false;
             this.bCancelSettings.Click += new System.EventHandler(this.bCancelSettings_Click);

@@ -25,7 +25,7 @@ namespace TABit.Properties {
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("80")]
+        [global::System.Configuration.DefaultSettingValueAttribute("72")]
         public string SCharsDefault {
             get {
                 return ((string)(this["SCharsDefault"]));
