@@ -304,6 +304,11 @@ namespace TABit
 
         private void bPrint_Click(object sender, EventArgs e)
         {
+            int charactersOnPage = 0;
+            int linesPerPage = 0;
+            string stringToPrint = tbWorkspace.Text;
+            
+
             PrintDocument printdocument = new PrintDocument();
             printdocument.DocumentName = "Tabs";
             printdialog.Document = printdocument;
@@ -315,7 +320,13 @@ namespace TABit
                 e1.PageSettings.PaperSize = new PaperSize("a4", 827, 1169); //Größe A4 in 1/100 Zoll
                 //e1.PageSettings.Margins = new Margins(10, 10, 10, 10);
 
-                e1.Graphics.DrawString(tbWorkspace.Text, new Font("Courier New", 10), new SolidBrush(Color.Black), e1.MarginBounds);
+                e1.Graphics.MeasureString(stringToPrint, this.Font, e1.MarginBounds.Size, StringFormat.GenericTypographic, out charactersOnPage, out linesPerPage);
+
+                e1.Graphics.DrawString(stringToPrint, new Font("Courier New", 10), new SolidBrush(Color.Black), e1.MarginBounds, StringFormat.GenericTypographic);
+
+                stringToPrint = stringToPrint.Substring(charactersOnPage);
+
+                e1.HasMorePages = (stringToPrint.Length > 0);
             };
 
             try
@@ -337,7 +348,7 @@ namespace TABit
 
         private void bNew_Click(object sender, EventArgs e)
         {
-            if ((tbWorkspace.Text != "") || (tbWorkspace.Text != null))
+            if (tbWorkspace.Text != "")
             {
                 try
                 {
