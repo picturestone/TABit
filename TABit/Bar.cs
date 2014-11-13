@@ -18,6 +18,8 @@ namespace TABit
             this.time_signature[0] = time_signatur_upside;
             this.time_signature[1] = time_signature_downside;
             this.notes = new List<Note>();
+            notes.Add(new Note(0, 8, 2, 2));
+            notes.Add(new Note(5, 12, 1, 2));
             this.main_window = main_window;
             this.is_drawn = is_drawn;
         }
@@ -39,8 +41,7 @@ namespace TABit
              * 1/24 -> 24 = Sixteenth-Triol 24
              * 1/32 -> 32 =                 32
              */
-            notes.Add(new Note(0, 8, 2, 2));
-            notes.Add(new Note(5, 12, 1, 2));
+            
 
             List<int> note_lengths = get_note_lengths();
             int bar_length = get_bar_length(note_lengths);
