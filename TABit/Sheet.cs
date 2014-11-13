@@ -26,6 +26,10 @@ namespace TABit
         public string[] get_block_text()
         {
             string[] output = new string[string_count];
+            for (int i = 0; i < string_count; i++)
+            {
+                output[i] = "";
+            }
             foreach (Bar bar in bars)
             {
                 if (bar.is_drawn == false) //Check if bar is already drawn
