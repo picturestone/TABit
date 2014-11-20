@@ -28,12 +28,14 @@ namespace TABit.Actions
 
             maxChars = Config.get_chars_per_string();
             //BarLength = Config.getBarLenght();
-            Hit = BarLength/4;
+            //Hit = BarLength/4;
             
             
 
-            int currentBar = Convert.ToInt32(Math.Ceiling(Convert.ToDecimal(CurrentPosition/BarLength)));
-            int CurrentPositionInBar = Convert.ToInt32(CurrentPosition - (Math.Floor(Convert.ToDecimal(CurrentPosition/BarLength)) *BarLength));
+            //int currentBar = Convert.ToInt32(Math.Ceiling(Convert.ToDecimal(CurrentPosition/BarLength)));
+            //int currentHit = Convert.ToInt32(Math.Ceiling(Convert.ToDecimal(CurrentPosition / Hit)));
+            //int CurrentPositionInBar = Convert.ToInt32(CurrentPosition - (Math.Floor(Convert.ToDecimal(CurrentPosition/BarLength)) *BarLength));
+            //int CurrentPositionInHit = Convert.ToInt32(CurrentPosition - (Math.Floor(Convert.ToDecimal(CurrentPosition / Hit)) * Hit));
 
             if (ToWrite == 112)  
             {

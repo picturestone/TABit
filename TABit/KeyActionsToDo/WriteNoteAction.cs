@@ -10,10 +10,12 @@ namespace TABit.Actions
     public class WriteNoteAction : KeyAction
     {
         private int ToWrite;
+        int length;
 
-        public WriteNoteAction(int ToWrite) 
+        public WriteNoteAction(int ToWrite, int length) 
         {
             this.ToWrite = ToWrite;
+            this.length = length;
         }
 
 
