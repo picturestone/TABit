@@ -209,5 +209,10 @@ namespace TABit
 
             return bar_is_ok;
         }
+
+        public void addNote(int fret, int length, int stringnumber, int startpoint)
+        {
+            notes.Add(new Note(fret, length, stringnumber, startpoint));
+        }
     }
 }

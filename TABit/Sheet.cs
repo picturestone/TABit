@@ -32,14 +32,14 @@ namespace TABit
             }
             foreach (Bar bar in bars)
             {
-                if (bar.is_drawn == false) //Check if bar is already drawn
+                if (bar.is_drawn == false) //bar is not drawn yet
                 {
                     List<int> note_lengths = bar.get_note_lengths();
                     int bar_length = bar.get_bar_length(note_lengths);
                     Dictionary<int, int> written_lengths = bar.get_written_length_of_each_note(bar_length, note_lengths);
                     string[] output_of_bar = bar.string_output(written_lengths, this.string_count, bar_length);
 
-                    if (output[0].Length + output_of_bar[0].Length + 2 <= this.chars_per_string)
+                    if (output[0].Length + output_of_bar[0].Length + 1 <= this.chars_per_string)
                     {
                         for (int i = 0; i < string_count; i++)
                         {
@@ -48,14 +48,6 @@ namespace TABit
                             bar.is_drawn = true;
                         }
                     }
-                }
-                else
-                {
-                    for (int i = 0; i < string_count; i++)
-                    {
-                        output[i] += "|";
-                    }
-                    return output;
                 }
             }
 
@@ -71,11 +63,14 @@ namespace TABit
             {
                 foreach (string instrument_string in get_block_text())
                 {
-                    output.Add(instrument_string);
+                    output.Add(instrument_string + "|");
                 }
-                for (int i = 0; i < lines_between_blocks; i++)
+                if (are_bars_drawn() == false)
                 {
-                    output.Add("");
+                    for (int i = 0; i < lines_between_blocks; i++)
+                    {
+                        output.Add("");
+                    }
                 }
             }
 

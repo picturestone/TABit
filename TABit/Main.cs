@@ -206,6 +206,8 @@ namespace TABit
         {
             //notesheet.add_bar(    todo: use this function
             notesheet.add_bar(Config.get_timing_upside(this), Config.get_timing_downside(this));
+            notesheet.add_bar(Config.get_timing_upside(this), Config.get_timing_downside(this));
+            notesheet.add_bar(Config.get_timing_upside(this), Config.get_timing_downside(this));
             tbWorkspace.Lines = notesheet.get_sheet_text();
             //Bar Testbar = new Bar(Convert.ToInt16(cbTimingUpside.Text), Convert.ToInt16(cbTimingDownside.Text), this, false);
             //tbWorkspace.Lines = Testbar.test_output();
