@@ -17,22 +17,30 @@ namespace TABit
         {
             InitializeComponent();
 
-            if(TABit.Properties.Settings.Default.SCharsUser == "")
+            try
             {
-                tbChars.Text = TABit.Properties.Settings.Default.SCharsDefault;
-            }
-            else
-            {
-                tbChars.Text = TABit.Properties.Settings.Default.SCharsUser;
-            }
+                if (TABit.Properties.Settings.Default.SCharsUser == "")
+                {
+                    tbChars.Text = TABit.Properties.Settings.Default.SCharsDefault;
+                }
+                else
+                {
+                    tbChars.Text = TABit.Properties.Settings.Default.SCharsUser;
+                }
 
-            if(TABit.Properties.Settings.Default.SLinesUser == "")
-            {
-                tbLinesSpace.Text = TABit.Properties.Settings.Default.SLinesDefault;
+                if (TABit.Properties.Settings.Default.SLinesUser == "")
+                {
+                    tbLinesSpace.Text = TABit.Properties.Settings.Default.SLinesDefault;
+                }
+                else
+                {
+                    tbLinesSpace.Text = TABit.Properties.Settings.Default.SLinesUser;
+                }
             }
-            else
+            catch
             {
-                tbLinesSpace.Text = TABit.Properties.Settings.Default.SLinesUser;
+                this.Close();
+                MessageBox.Show("Can't load Settings!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -65,7 +73,7 @@ namespace TABit
             }
             catch
             {
-                
+                MessageBox.Show("Can't save Settings!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -76,14 +84,28 @@ namespace TABit
 
         private void bCharsDefault_Click(object sender, EventArgs e)
         {
-            tbChars.Text = TABit.Properties.Settings.Default.SCharsDefault;
-            TABit.Properties.Settings.Default.SCharsUser = "";
+            try
+            {
+                tbChars.Text = TABit.Properties.Settings.Default.SCharsDefault;
+                TABit.Properties.Settings.Default.SCharsUser = "";
+            }
+            catch
+            {
+                MessageBox.Show("Can't load Default-Settings!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void bLinesDefault_Click(object sender, EventArgs e)
         {
-            tbLinesSpace.Text = TABit.Properties.Settings.Default.SLinesDefault;
-            TABit.Properties.Settings.Default.SLinesUser = "";
+            try
+            {
+                tbLinesSpace.Text = TABit.Properties.Settings.Default.SLinesDefault;
+                TABit.Properties.Settings.Default.SLinesUser = "";
+            }
+            catch
+            {
+                MessageBox.Show("Can't load Default-Settings!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

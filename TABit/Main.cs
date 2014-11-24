@@ -243,7 +243,7 @@ namespace TABit
             if (System.Windows.Forms.Application.OpenForms["Settings"] as Settings == null)
             {
                 SettingsO = new Settings();
-                SettingsO.Show();
+                try { SettingsO.Show(); } catch { }
             }
             else
             {
@@ -278,9 +278,9 @@ namespace TABit
 
                     MessageBox.Show("Document saved", "Saved", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                catch
+                catch (Exception eSaveTo)
                 {
-                    MessageBox.Show("Error! Document not saved!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Error! Document not saved! \r\n\n" + eSaveTo, "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
                 savetodialog.FileName = "";
@@ -289,18 +289,29 @@ namespace TABit
 
         private void bOpen_Click(object sender, EventArgs e)
         {
-            if (opendialog.ShowDialog() == DialogResult.OK)
+            try
             {
-                //opendialog.FileName = "";
-
-                using (StreamReader sr = new StreamReader(opendialog.FileName))
+                if (opendialog.ShowDialog() == DialogResult.OK)
                 {
-                    while (sr.Peek() >= 0)
+                    //opendialog.FileName = "";
+
+                    using (StreamReader sr = new StreamReader(opendialog.FileName))
                     {
-                        tbWorkspace.Text = "";
-                        tbWorkspace.Text = sr.ReadToEnd();
+                        if (sr.ReadToEnd() != "")
+                        {
+                            tbWorkspace.Text = "";
+                            tbWorkspace.Text = sr.ReadToEnd();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Document is empty", "Document empty", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        }
                     }
                 }
+            }
+            catch (Exception eOpen)
+            {
+                MessageBox.Show("Can't open selected document! \r\n\n" + eOpen, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -338,9 +349,9 @@ namespace TABit
                     printdocument.Print();
                 }
             }
-            catch (Exception ex)
+            catch (Exception ePrint)
             {
-                MessageBox.Show("Could not print the document" + ex, "Printing Error",
+                MessageBox.Show("Could not print the document! \r\n\n" + ePrint, "Printing Error",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error,
                     MessageBoxDefaultButton.Button1);
@@ -366,9 +377,9 @@ namespace TABit
                         tbWorkspace.Text = "";
                     }
                 }
-                catch
+                catch (Exception eNew)
                 {
-                    MessageBox.Show("Could not load a new document", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Could not load a new document! \r\n\n" + eNew, "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
