@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TABit
 {
-    class Note
+    public class Note
     {
         public int fret { get; set; }
         public int length { get; set; }

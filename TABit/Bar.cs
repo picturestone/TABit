@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TABit
 {
-    class Bar
+    public class Bar
     {
         public List<Note> notes;
         public int[] time_signature = new int[2];

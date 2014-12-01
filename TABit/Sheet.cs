@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TABit
 {
-    class Sheet
+    public class Sheet
     {
         public List<Bar> bars;
         public int string_count { get; set; }

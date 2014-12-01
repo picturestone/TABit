@@ -26,7 +26,7 @@ namespace TABit
         SaveFileDialog savetodialog;
         OpenFileDialog opendialog;
         PrintDialog printdialog;
-        Sheet notesheet;
+        public Sheet notesheet;
 
         public Dictionary<int, TABit.Actions.KeyAction> KeyActionDict;
        

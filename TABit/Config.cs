@@ -53,6 +53,7 @@ namespace TABit
                     }
                 }
             }
+            return 0;
         }
     }
 }
