@@ -33,8 +33,6 @@ namespace TABit.Actions
             decimal Blocklength = linesBetween + strings;
 
 
-            int currentBlock = Convert.ToInt32(Math.Ceiling(currentLine/Blocklength));
-
             int CurrentPositionInBlock = Convert.ToInt32(currentLine - (Math.Floor(Convert.ToDecimal(currentLine/Blocklength)) *Blocklength));
 
          
