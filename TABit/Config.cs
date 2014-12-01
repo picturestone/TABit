@@ -38,5 +38,21 @@ namespace TABit
         {
             return Convert.ToInt16(main.cbTimingDownside.Text);
         }
+
+        public static int get_bar_where_cursor_is_in(Main main)
+        {
+            int charnumber = main.tbWorkspace.SelectionStart;
+            for (int i = 0; i < Convert.ToInt16(main.cbStrings.Text); i++)
+            {
+                foreach (Bar bar in main.notesheet.bars)
+                {
+                    int barlength = bar.get_bar_length(bar.get_note_lengths());
+                    if (charnumber > barlength)
+                    {
+                        charnumber = charnumber - barlength;
+                    }
+                }
+            }
+        }
     }
 }
