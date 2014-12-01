@@ -131,18 +131,18 @@ namespace TABit
 
             //SaveFileDialog
             savetodialog = new SaveFileDialog();
-            savetodialog.InitialDirectory = @"C:\";
             savetodialog.Title = "Save to ...";
             savetodialog.DefaultExt = "txt";
             savetodialog.Filter = "Text files (*.txt)|*.txt";
+            savetodialog.RestoreDirectory = true;
             ///////////////////////////////////////////////
             
             //OpenDialog
             opendialog = new OpenFileDialog();
-            opendialog.InitialDirectory = @"C:\";
             opendialog.Title = "Open ...";
             opendialog.DefaultExt = "txt";
             opendialog.Filter = "Text files (*.txt)|*.txt";
+            opendialog.RestoreDirectory = true;
             ///////////////////////////////////////////////
 
             //PrintDialog
