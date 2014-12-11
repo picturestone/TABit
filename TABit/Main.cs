@@ -340,6 +340,7 @@ namespace TABit
                 stringToPrint = stringToPrint.Substring(charactersOnPage);
 
                 e1.HasMorePages = (stringToPrint.Length > 0);
+                return;
             };
 
             try

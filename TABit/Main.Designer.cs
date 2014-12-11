@@ -91,7 +91,7 @@
             this.tlpOut.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tlpOut.ColumnCount = 2;
             this.tlpOut.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpOut.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 196F));
+            this.tlpOut.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 197F));
             this.tlpOut.Controls.Add(this.tlpMenu, 0, 0);
             this.tlpOut.Controls.Add(this.tlpRight, 1, 1);
             this.tlpOut.Controls.Add(this.bSettings, 1, 0);
@@ -113,7 +113,7 @@
             this.tlpMenu.ColumnCount = 3;
             this.tlpMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 470F));
             this.tlpMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 196F));
+            this.tlpMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 197F));
             this.tlpMenu.Controls.Add(this.tlpMenuicons, 0, 0);
             this.tlpMenu.Controls.Add(this.pbNote, 2, 0);
             this.tlpMenu.Controls.Add(this.tableLayoutPanel4, 1, 0);
@@ -123,7 +123,7 @@
             this.tlpMenu.Name = "tlpMenu";
             this.tlpMenu.RowCount = 1;
             this.tlpMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpMenu.Size = new System.Drawing.Size(933, 150);
+            this.tlpMenu.Size = new System.Drawing.Size(932, 150);
             this.tlpMenu.TabIndex = 0;
             // 
             // tlpMenuicons
@@ -236,7 +236,7 @@
             this.pbNote.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pbNote.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbNote.InitialImage = null;
-            this.pbNote.Location = new System.Drawing.Point(784, 25);
+            this.pbNote.Location = new System.Drawing.Point(782, 25);
             this.pbNote.Name = "pbNote";
             this.pbNote.Size = new System.Drawing.Size(100, 100);
             this.pbNote.TabIndex = 1;
@@ -256,7 +256,7 @@
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(263, 148);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(261, 148);
             this.tableLayoutPanel4.TabIndex = 2;
             // 
             // tableLayoutPanel5
@@ -275,7 +275,7 @@
             this.tableLayoutPanel5.RowCount = 2;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(263, 74);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(261, 74);
             this.tableLayoutPanel5.TabIndex = 0;
             // 
             // lTiming
@@ -283,7 +283,7 @@
             this.lTiming.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lTiming.AutoSize = true;
             this.lTiming.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lTiming.Location = new System.Drawing.Point(167, 16);
+            this.lTiming.Location = new System.Drawing.Point(165, 16);
             this.lTiming.Name = "lTiming";
             this.lTiming.Size = new System.Drawing.Size(60, 21);
             this.lTiming.TabIndex = 1;
@@ -313,7 +313,7 @@
             "6",
             "7",
             "8"});
-            this.cbStrings.Location = new System.Drawing.Point(36, 41);
+            this.cbStrings.Location = new System.Drawing.Point(35, 41);
             this.cbStrings.Name = "cbStrings";
             this.cbStrings.Size = new System.Drawing.Size(59, 29);
             this.cbStrings.TabIndex = 2;
@@ -329,12 +329,12 @@
             this.tableLayoutPanel6.Controls.Add(this.label1, 1, 0);
             this.tableLayoutPanel6.Controls.Add(this.cbTimingDownside, 2, 0);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(131, 37);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(130, 37);
             this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(132, 37);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(131, 37);
             this.tableLayoutPanel6.TabIndex = 3;
             // 
             // cbTimingUpside
@@ -356,7 +356,7 @@
             this.cbTimingUpside.Location = new System.Drawing.Point(3, 3);
             this.cbTimingUpside.Name = "cbTimingUpside";
             this.cbTimingUpside.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.cbTimingUpside.Size = new System.Drawing.Size(53, 29);
+            this.cbTimingUpside.Size = new System.Drawing.Size(52, 29);
             this.cbTimingUpside.TabIndex = 4;
             this.cbTimingUpside.TabStop = false;
             // 
@@ -364,7 +364,7 @@
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(62, 12);
+            this.label1.Location = new System.Drawing.Point(61, 12);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(7, 13);
             this.label1.TabIndex = 5;
@@ -386,7 +386,7 @@
             "6",
             "7",
             "8"});
-            this.cbTimingDownside.Location = new System.Drawing.Point(75, 3);
+            this.cbTimingDownside.Location = new System.Drawing.Point(74, 3);
             this.cbTimingDownside.Name = "cbTimingDownside";
             this.cbTimingDownside.Size = new System.Drawing.Size(54, 29);
             this.cbTimingDownside.TabIndex = 6;
@@ -399,7 +399,7 @@
             this.bTuning.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
             this.bTuning.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bTuning.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bTuning.Location = new System.Drawing.Point(61, 91);
+            this.bTuning.Location = new System.Drawing.Point(60, 91);
             this.bTuning.Name = "bTuning";
             this.bTuning.Size = new System.Drawing.Size(140, 40);
             this.bTuning.TabIndex = 1;
@@ -418,7 +418,7 @@
             this.tlpRight.Controls.Add(this.tableLayoutPanel3, 1, 2);
             this.tlpRight.Controls.Add(this.bPM, 1, 4);
             this.tlpRight.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpRight.Location = new System.Drawing.Point(935, 152);
+            this.tlpRight.Location = new System.Drawing.Point(934, 152);
             this.tlpRight.Margin = new System.Windows.Forms.Padding(0);
             this.tlpRight.Name = "tlpRight";
             this.tlpRight.RowCount = 6;
@@ -428,7 +428,7 @@
             this.tlpRight.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 8F));
             this.tlpRight.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
             this.tlpRight.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpRight.Size = new System.Drawing.Size(196, 496);
+            this.tlpRight.Size = new System.Drawing.Size(197, 496);
             this.tlpRight.TabIndex = 1;
             // 
             // tableLayoutPanel1
@@ -449,7 +449,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(180, 166);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(181, 166);
             this.tableLayoutPanel1.TabIndex = 0;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
@@ -474,7 +474,7 @@
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(180, 83);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(181, 83);
             this.tableLayoutPanel2.TabIndex = 13;
             // 
             // bFull
@@ -570,7 +570,7 @@
             this.bTriol.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bTriol.Location = new System.Drawing.Point(3, 86);
             this.bTriol.Name = "bTriol";
-            this.bTriol.Size = new System.Drawing.Size(174, 35);
+            this.bTriol.Size = new System.Drawing.Size(175, 35);
             this.bTriol.TabIndex = 14;
             this.bTriol.TabStop = false;
             this.bTriol.Text = "- 3 -";
@@ -585,7 +585,7 @@
             this.bQuintol.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bQuintol.Location = new System.Drawing.Point(3, 127);
             this.bQuintol.Name = "bQuintol";
-            this.bQuintol.Size = new System.Drawing.Size(174, 36);
+            this.bQuintol.Size = new System.Drawing.Size(175, 36);
             this.bQuintol.TabIndex = 15;
             this.bQuintol.TabStop = false;
             this.bQuintol.Text = "- 5 -";
@@ -615,7 +615,7 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(180, 112);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(181, 112);
             this.tableLayoutPanel3.TabIndex = 12;
             // 
             // bRelease
@@ -747,7 +747,7 @@
             this.bPM.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bPM.Location = new System.Drawing.Point(11, 297);
             this.bPM.Name = "bPM";
-            this.bPM.Size = new System.Drawing.Size(174, 36);
+            this.bPM.Size = new System.Drawing.Size(175, 36);
             this.bPM.TabIndex = 13;
             this.bPM.TabStop = false;
             this.bPM.Text = "PM";
@@ -760,7 +760,7 @@
             this.bSettings.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
             this.bSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bSettings.Image = global::TABit.Properties.Resources.settings;
-            this.bSettings.Location = new System.Drawing.Point(998, 41);
+            this.bSettings.Location = new System.Drawing.Point(997, 41);
             this.bSettings.Name = "bSettings";
             this.bSettings.Size = new System.Drawing.Size(70, 70);
             this.bSettings.TabIndex = 2;
@@ -780,9 +780,8 @@
             this.tbWorkspace.Margin = new System.Windows.Forms.Padding(0);
             this.tbWorkspace.Multiline = true;
             this.tbWorkspace.Name = "tbWorkspace";
-            this.tbWorkspace.ReadOnly = true;
             this.tbWorkspace.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tbWorkspace.Size = new System.Drawing.Size(933, 496);
+            this.tbWorkspace.Size = new System.Drawing.Size(932, 496);
             this.tbWorkspace.TabIndex = 3;
             // 
             // Main
