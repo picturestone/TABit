@@ -20,6 +20,7 @@ namespace TABit
             barsInBlock.Add("three");
             barsInBlock.Add("four");
             barsInBlock.Add("five");
+            barsInBlock[3] = null;
         }
 
         public void addBar(Bar bar, int addAt)
@@ -27,20 +28,27 @@ namespace TABit
             
         }
 
-        public void makeSpaceInBarsInBlock(int makeSpaceAtNumber)
+        public void makeSpaceInBarsInBlock(int makeSpaceAtNumberRecursive, int makeSpaceAtNumber)
         {
-            if (makeSpaceAtNumber == barsInBlock.Count())
+            if (barsInBlock[makeSpaceAtNumber] == null)
             {
-                barsInBlock.Add(barsInBlock[makeSpaceAtNumber - 1]);
-                barsInBlock[makeSpaceAtNumber - 1] = null;
+                return;
             }
-            else if (barsInBlock[makeSpaceAtNumber] == null)
+            else if (makeSpaceAtNumberRecursive == barsInBlock.Count()-1)
             {
-                barsInBlock[makeSpaceAtNumber] = barsInBlock[makeSpaceAtNumber - 1];
+                barsInBlock.Add(barsInBlock[makeSpaceAtNumberRecursive]);
+                barsInBlock[makeSpaceAtNumberRecursive] = null;
+                makeSpaceInBarsInBlock(makeSpaceAtNumberRecursive, makeSpaceAtNumber);
+            }
+            else if (barsInBlock[makeSpaceAtNumberRecursive] == null)
+            {
+                barsInBlock[makeSpaceAtNumberRecursive] = barsInBlock[makeSpaceAtNumberRecursive - 1];
+                barsInBlock[makeSpaceAtNumberRecursive - 1] = null;
+                makeSpaceInBarsInBlock(makeSpaceAtNumberRecursive - 1, makeSpaceAtNumber);
             }
             else
             {
-                makeSpaceInBarsInBlock(makeSpaceAtNumber + 1);
+                makeSpaceInBarsInBlock(makeSpaceAtNumberRecursive + 1, makeSpaceAtNumber);
             }
         }
     }
