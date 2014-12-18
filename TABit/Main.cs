@@ -37,8 +37,6 @@ namespace TABit
 
             InitializeComponent();
 
-            //2-8
-            //3-8
 
             //Tooltips
             toolTip1.SetToolTip(bNew, "New");
@@ -331,7 +329,6 @@ namespace TABit
             printdocument.PrintPage += delegate(object sender1, PrintPageEventArgs e1)
             {
                 e1.PageSettings.PaperSize = new PaperSize("a4", 827, 1169); //Größe A4 in 1/100 Zoll
-                //e1.PageSettings.Margins = new Margins(10, 10, 10, 10);
 
                 e1.Graphics.MeasureString(stringToPrint, this.Font, e1.MarginBounds.Size, StringFormat.GenericTypographic, out charactersOnPage, out linesPerPage);
 
@@ -349,6 +346,7 @@ namespace TABit
                 {
                     printdocument.Print();
                 }
+       
             }
             catch (Exception ePrint)
             {
