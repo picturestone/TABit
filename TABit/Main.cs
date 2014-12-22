@@ -148,8 +148,9 @@ namespace TABit
             printdialog.AllowSelection = true;
             printdialog.AllowSomePages = true;
             ///////////////////////////////////////////////
-  
 
+            Block asdf = new Block();
+            asdf.makeSpaceInBarsInBlock(3, 3);
 
             //Make a new Sheet
             notesheet = new Sheet(Convert.ToInt16(cbStrings.Text), Config.get_chars_per_string(), Config.get_lines_between_blocks(), this);

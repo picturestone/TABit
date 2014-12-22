@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Bar.cs" />
+    <Compile Include="Block.cs" />
     <Compile Include="Config.cs" />
     <Compile Include="KeyAction.cs" />
     <Compile Include="KeyActionsToDo\ChooseBarAction.cs" />

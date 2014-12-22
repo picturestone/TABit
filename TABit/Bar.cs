@@ -9,19 +9,19 @@ namespace TABit
     public class Bar
     {
         public List<Note> notes;
-        public int[] time_signature = new int[2];
-        public Main main_window;
-        public bool is_drawn;
+        public int[] timeSignature = new int[2];
+        public Main mainWindow;
+        public bool isDrawn;
 
         public Bar(int time_signatur_upside, int time_signature_downside, Main main_window, bool is_drawn)
         {
-            this.time_signature[0] = time_signatur_upside;
-            this.time_signature[1] = time_signature_downside;
+            this.timeSignature[0] = time_signatur_upside;
+            this.timeSignature[1] = time_signature_downside;
             this.notes = new List<Note>();
             notes.Add(new Note(0, 8, 2, 2));
             notes.Add(new Note(5, 12, 1, 2));
-            this.main_window = main_window;
-            this.is_drawn = is_drawn;
+            this.mainWindow = main_window;
+            this.isDrawn = is_drawn;
         }
 
         public string[] test_output()
@@ -47,7 +47,7 @@ namespace TABit
             int bar_length = get_bar_length(note_lengths);
             Dictionary<int, int> written_lengths = get_written_length_of_each_note(bar_length, note_lengths);
 
-            string[] output = string_output(written_lengths, Convert.ToInt16(main_window.cbStrings.Text), bar_length);
+            string[] output = string_output(written_lengths, Convert.ToInt16(mainWindow.cbStrings.Text), bar_length);
             return output;
         }
 

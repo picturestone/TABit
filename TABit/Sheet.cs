@@ -32,7 +32,7 @@ namespace TABit
             }
             foreach (Bar bar in bars)
             {
-                if (bar.is_drawn == false) //bar is not drawn yet
+                if (bar.isDrawn == false) //bar is not drawn yet
                 {
                     List<int> note_lengths = bar.get_note_lengths();
                     int bar_length = bar.get_bar_length(note_lengths);
@@ -45,7 +45,7 @@ namespace TABit
                         {
                             output[i] += "|";
                             output[i] += output_of_bar[i];
-                            bar.is_drawn = true;
+                            bar.isDrawn = true;
                         }
                     }
                 }
@@ -81,7 +81,7 @@ namespace TABit
         {
             foreach (Bar bar in bars)
             {
-                if (bar.is_drawn == false)
+                if (bar.isDrawn == false)
                 {
                     return false;
                 }
