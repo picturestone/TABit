@@ -107,5 +107,10 @@ namespace TABit
                 MessageBox.Show("Can't load Default-Settings!", "Error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
