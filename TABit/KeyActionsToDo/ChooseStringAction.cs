@@ -31,7 +31,7 @@ namespace TABit.Actions
 
             //currentLine = Convert.ToInt32(box.SelectionStart - (Math.Floor(Convert.ToDecimal(box.SelectionStart/LineLength))*LineLength));
 
-            linesBetween = Config.get_lines_between_blocks();
+            linesBetween = Config.getLinesBetweenBlocks();
 
             decimal Blocklength = linesBetween + strings;
 

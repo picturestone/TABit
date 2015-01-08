@@ -27,7 +27,7 @@ namespace TABit.Actions
 
             var currentLine = box.GetLineFromCharIndex(box.SelectionStart)+1;
 
-            linesBetween = Config.get_lines_between_blocks();     
+            linesBetween = Config.getLinesBetweenBlocks();     
 
 
             decimal Blocklength = linesBetween + strings;

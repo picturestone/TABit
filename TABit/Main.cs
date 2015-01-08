@@ -79,16 +79,16 @@ namespace TABit
             KeyActionDict.Add(113, new Actions.ChooseBarAction(113));   //F2
             KeyActionDict.Add(114, new Actions.ChooseBarAction(114));   //F3
             KeyActionDict.Add(115, new Actions.ChooseBarAction(115));   //F4
-            KeyActionDict.Add(49, new Actions.WriteNoteAction(49,currentLength));    //1 oben
-            KeyActionDict.Add(50, new Actions.WriteNoteAction(50, currentLength));    //2 oben       
-            KeyActionDict.Add(51, new Actions.WriteNoteAction(51, currentLength));    //3 oben   
-            KeyActionDict.Add(52, new Actions.WriteNoteAction(52, currentLength));    //4 oben   
-            KeyActionDict.Add(53, new Actions.WriteNoteAction(53, currentLength));    //5 oben
-            KeyActionDict.Add(54, new Actions.WriteNoteAction(54, currentLength));    //6 oben   
-            KeyActionDict.Add(55, new Actions.WriteNoteAction(55, currentLength));    //7 oben
-            KeyActionDict.Add(56, new Actions.WriteNoteAction(56, currentLength));    //8 oben
-            KeyActionDict.Add(57, new Actions.WriteNoteAction(57, currentLength));    //9 oben
-            KeyActionDict.Add(48, new Actions.WriteNoteAction(48, currentLength));    //0 oben
+            KeyActionDict.Add(49, new Actions.WriteNoteAction(49, currentLength, Convert.ToInt16(cbStrings.Text)));    //1 oben
+            KeyActionDict.Add(50, new Actions.WriteNoteAction(50, currentLength, Convert.ToInt16(cbStrings.Text)));    //2 oben       
+            KeyActionDict.Add(51, new Actions.WriteNoteAction(51, currentLength, Convert.ToInt16(cbStrings.Text)));    //3 oben   
+            KeyActionDict.Add(52, new Actions.WriteNoteAction(52, currentLength, Convert.ToInt16(cbStrings.Text)));    //4 oben   
+            KeyActionDict.Add(53, new Actions.WriteNoteAction(53, currentLength, Convert.ToInt16(cbStrings.Text)));    //5 oben
+            KeyActionDict.Add(54, new Actions.WriteNoteAction(54, currentLength, Convert.ToInt16(cbStrings.Text)));    //6 oben   
+            KeyActionDict.Add(55, new Actions.WriteNoteAction(55, currentLength, Convert.ToInt16(cbStrings.Text)));    //7 oben
+            KeyActionDict.Add(56, new Actions.WriteNoteAction(56, currentLength, Convert.ToInt16(cbStrings.Text)));    //8 oben
+            KeyActionDict.Add(57, new Actions.WriteNoteAction(57, currentLength, Convert.ToInt16(cbStrings.Text)));    //9 oben
+            KeyActionDict.Add(48, new Actions.WriteNoteAction(48, currentLength, Convert.ToInt16(cbStrings.Text)));    //0 oben
             KeyActionDict.Add(8, new Actions.DeleteAction(8, Convert.ToInt16(cbStrings.Text)));     //Backslash
             KeyActionDict.Add(508, new Actions.DeleteAction(508, Convert.ToInt16(cbStrings.Text)));   //Shift + Backslash
             KeyActionDict.Add(81, new Actions.ChooseStringAction(81,Convert.ToInt16(cbStrings.Text)));    //q       
@@ -98,7 +98,7 @@ namespace TABit
             KeyActionDict.Add(84, new Actions.ChooseStringAction(84,Convert.ToInt16(cbStrings.Text)));    //t  
             KeyActionDict.Add(90, new Actions.ChooseStringAction(90,Convert.ToInt16(cbStrings.Text)));    //z
             KeyActionDict.Add(89, new Actions.ChooseStringAction(89,Convert.ToInt16(cbStrings.Text)));    //y
-            KeyActionDict.Add(88, new Actions.WriteNoteAction(88, currentLength));    //x
+            KeyActionDict.Add(88, new Actions.WriteNoteAction(88, currentLength, Convert.ToInt16(cbStrings.Text)));    //x
             KeyActionDict.Add(33, new Actions.ChooseLineAction(33, Convert.ToInt16(cbStrings.Text)));    //bild auf
             KeyActionDict.Add(34, new Actions.ChooseLineAction(34, Convert.ToInt16(cbStrings.Text)));    //bild runter
             KeyActionDict.Add(38, null);    //Pfeil rauf
@@ -106,16 +106,16 @@ namespace TABit
             KeyActionDict.Add(37, new Actions.ChooseNoteAction(37));    //Pfeil links
             KeyActionDict.Add(39, new Actions.ChooseNoteAction(39));    //Pfeil rechts
             KeyActionDict.Add(32, new Actions.ChooseNoteAction(32));    //Space
-            KeyActionDict.Add(97, new Actions.WriteNoteAction(97, currentLength));    //1 Num       
-            KeyActionDict.Add(98, new Actions.WriteNoteAction(98, currentLength));    //2 Num 
-            KeyActionDict.Add(99, new Actions.WriteNoteAction(99, currentLength));    //3 Num
-            KeyActionDict.Add(100, new Actions.WriteNoteAction(100, currentLength));   //4 Num
-            KeyActionDict.Add(101, new Actions.WriteNoteAction(101, currentLength));   //5 Num  
-            KeyActionDict.Add(102, new Actions.WriteNoteAction(102, currentLength));   //6 Num
-            KeyActionDict.Add(103, new Actions.WriteNoteAction(103, currentLength));   //7 Num
-            KeyActionDict.Add(104, new Actions.WriteNoteAction(104, currentLength));   //8 Num
-            KeyActionDict.Add(105, new Actions.WriteNoteAction(105, currentLength));   //9 Num
-            KeyActionDict.Add(96, new Actions.WriteNoteAction(96, currentLength));    //0 Num
+            KeyActionDict.Add(97, new Actions.WriteNoteAction(97, currentLength, Convert.ToInt16(cbStrings.Text)));    //1 Num       
+            KeyActionDict.Add(98, new Actions.WriteNoteAction(98, currentLength, Convert.ToInt16(cbStrings.Text)));    //2 Num 
+            KeyActionDict.Add(99, new Actions.WriteNoteAction(99, currentLength, Convert.ToInt16(cbStrings.Text)));    //3 Num
+            KeyActionDict.Add(100, new Actions.WriteNoteAction(100, currentLength, Convert.ToInt16(cbStrings.Text)));   //4 Num
+            KeyActionDict.Add(101, new Actions.WriteNoteAction(101, currentLength, Convert.ToInt16(cbStrings.Text)));   //5 Num  
+            KeyActionDict.Add(102, new Actions.WriteNoteAction(102, currentLength, Convert.ToInt16(cbStrings.Text)));   //6 Num
+            KeyActionDict.Add(103, new Actions.WriteNoteAction(103, currentLength, Convert.ToInt16(cbStrings.Text)));   //7 Num
+            KeyActionDict.Add(104, new Actions.WriteNoteAction(104, currentLength, Convert.ToInt16(cbStrings.Text)));   //8 Num
+            KeyActionDict.Add(105, new Actions.WriteNoteAction(105, currentLength, Convert.ToInt16(cbStrings.Text)));   //9 Num
+            KeyActionDict.Add(96, new Actions.WriteNoteAction(96, currentLength, Convert.ToInt16(cbStrings.Text)));    //0 Num
             KeyActionDict.Add(109, new Actions.ChooseSpeedAction("-",this));   //Minus Num
             KeyActionDict.Add(107, new Actions.ChooseSpeedAction("+",this));   //Plus Num
 
@@ -153,7 +153,7 @@ namespace TABit
             asdf.makeSpaceInBarsInBlock(3, 3);
 
             //Make a new Sheet
-            notesheet = new Sheet(Convert.ToInt16(cbStrings.Text), Config.get_chars_per_string(), Config.get_lines_between_blocks(), this);
+            notesheet = new Sheet(Convert.ToInt16(cbStrings.Text), Config.getCharsPerString(), Config.getLinesBetweenBlocks(), this);
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
@@ -204,10 +204,10 @@ namespace TABit
         private void bSave_Click(object sender, EventArgs e)
         {
             //notesheet.add_bar(    todo: use this function
-            notesheet.add_bar(Config.get_timing_upside(this), Config.get_timing_downside(this));
-            notesheet.add_bar(Config.get_timing_upside(this), Config.get_timing_downside(this));
-            notesheet.add_bar(Config.get_timing_upside(this), Config.get_timing_downside(this));
-            tbWorkspace.Lines = notesheet.get_sheet_text();
+            notesheet.addBar(Config.getTimingUpside(this), Config.getTimingDownside(this));
+            notesheet.addBar(Config.getTimingUpside(this), Config.getTimingDownside(this));
+            notesheet.addBar(Config.getTimingUpside(this), Config.getTimingDownside(this));
+            tbWorkspace.Lines = notesheet.getSheetText();
             //Bar Testbar = new Bar(Convert.ToInt16(cbTimingUpside.Text), Convert.ToInt16(cbTimingDownside.Text), this, false);
             //tbWorkspace.Lines = Testbar.test_output();
 

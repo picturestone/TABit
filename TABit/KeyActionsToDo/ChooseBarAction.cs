@@ -26,7 +26,7 @@ namespace TABit.Actions
         {
             int CurrentPosition = box.SelectionStart;
 
-            maxChars = Config.get_chars_per_string();
+            maxChars = Config.getCharsPerString();
             //BarLength = Config.getBarLenght();
             //Hit = BarLength/4;
             

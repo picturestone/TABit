@@ -9,24 +9,25 @@ namespace TABit
     public class Sheet
     {
         public List<Bar> bars;
-        public int string_count { get; set; }
-        public int chars_per_string { get; set; }
-        public int lines_between_blocks { get; set; }
+        public List<Block> blocks;
+        public int stringCount { get; set; }
+        public int charsPerString { get; set; }
+        public int linesBetweenBlocks { get; set; }
         public Main mainWindow;
 
-        public Sheet(int string_count, int chars_per_string, int lines_between_blocks, Main mainWindow)
+        public Sheet(int stringCount, int charsPerString, int linesBetweenBlocks, Main mainWindow)
         {
             this.bars = new List<Bar>();
-            this.string_count = string_count;
-            this.chars_per_string = chars_per_string;
-            this.lines_between_blocks = lines_between_blocks;
+            this.stringCount = stringCount;
+            this.charsPerString = charsPerString;
+            this.linesBetweenBlocks = linesBetweenBlocks;
             this.mainWindow = mainWindow;
         }
 
-        public string[] get_block_text()
+        public string[] getBlockText()
         {
-            string[] output = new string[string_count];
-            for (int i = 0; i < string_count; i++)
+            string[] output = new string[stringCount];
+            for (int i = 0; i < stringCount; i++)
             {
                 output[i] = "";
             }
@@ -34,17 +35,17 @@ namespace TABit
             {
                 if (bar.isDrawn == false) //bar is not drawn yet
                 {
-                    List<int> note_lengths = bar.get_note_lengths();
-                    int bar_length = bar.get_bar_length(note_lengths);
-                    Dictionary<int, int> written_lengths = bar.get_written_length_of_each_note(bar_length, note_lengths);
-                    string[] output_of_bar = bar.string_output(written_lengths, this.string_count, bar_length);
+                    List<int> noteLengths = bar.getNoteLengths();
+                    int barLength = bar.getBarLength(noteLengths);
+                    Dictionary<int, int> writtenLengths = bar.getWrittenLengthOfEachNote(barLength, noteLengths);
+                    string[] outputOfBar = bar.stringOutput(writtenLengths, this.stringCount, barLength);
 
-                    if (output[0].Length + output_of_bar[0].Length + 1 <= this.chars_per_string)
+                    if (output[0].Length + outputOfBar[0].Length + 1 <= this.charsPerString)
                     {
-                        for (int i = 0; i < string_count; i++)
+                        for (int i = 0; i < stringCount; i++)
                         {
                             output[i] += "|";
-                            output[i] += output_of_bar[i];
+                            output[i] += outputOfBar[i];
                             bar.isDrawn = true;
                         }
                     }
@@ -54,20 +55,20 @@ namespace TABit
             return output;
         }
 
-        public string[] get_sheet_text()
+        public string[] getSheetText()
         {
             //Draw all the blocks. a block, then lines_between_blocks space, then the next block
 
             List<string> output = new List<string>();
-            while (are_bars_drawn() == false)
+            while (areBarsDrawn() == false)
             {
-                foreach (string instrument_string in get_block_text())
+                foreach (string instrumentString in getBlockText())
                 {
-                    output.Add(instrument_string + "|");
+                    output.Add(instrumentString + "|");
                 }
-                if (are_bars_drawn() == false)
+                if (areBarsDrawn() == false)
                 {
-                    for (int i = 0; i < lines_between_blocks; i++)
+                    for (int i = 0; i < linesBetweenBlocks; i++)
                     {
                         output.Add("");
                     }
@@ -77,7 +78,7 @@ namespace TABit
             return output.ToArray();
         }
 
-        public bool are_bars_drawn()
+        public bool areBarsDrawn()
         {
             foreach (Bar bar in bars)
             {
@@ -89,9 +90,9 @@ namespace TABit
             return true;
         }
 
-        public void add_bar(int time_signature_upside, int time_signature_downside)
+        public void addBar(int timeSignatureUpside, int timeSignatureDownside)
         {
-            bars.Add(new Bar(time_signature_upside, time_signature_downside, this.mainWindow, false));
+            bars.Add(new Bar(timeSignatureUpside, timeSignatureDownside, this.mainWindow, false));
         }
     }
 }

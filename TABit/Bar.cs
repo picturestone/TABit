@@ -13,18 +13,18 @@ namespace TABit
         public Main mainWindow;
         public bool isDrawn;
 
-        public Bar(int time_signatur_upside, int time_signature_downside, Main main_window, bool is_drawn)
+        public Bar(int timeSignaturUpside, int timeSignatureDownside, Main mainWindow, bool isDrawn)
         {
-            this.timeSignature[0] = time_signatur_upside;
-            this.timeSignature[1] = time_signature_downside;
+            this.timeSignature[0] = timeSignaturUpside;
+            this.timeSignature[1] = timeSignatureDownside;
             this.notes = new List<Note>();
             notes.Add(new Note(0, 8, 2, 2));
             notes.Add(new Note(5, 12, 1, 2));
-            this.mainWindow = main_window;
-            this.isDrawn = is_drawn;
+            this.mainWindow = mainWindow;
+            this.isDrawn = isDrawn;
         }
 
-        public string[] test_output()
+        public string[] testOutput()
         {
             /* Notelength:                  Requiered to complete bar
              * 1/1 -> 1 = Full              1
@@ -43,15 +43,15 @@ namespace TABit
              */
             
 
-            List<int> note_lengths = get_note_lengths();
-            int bar_length = get_bar_length(note_lengths);
-            Dictionary<int, int> written_lengths = get_written_length_of_each_note(bar_length, note_lengths);
+            List<int> noteLengths = getNoteLengths();
+            int barLength = getBarLength(noteLengths);
+            Dictionary<int, int> writtenLengths = getWrittenLengthOfEachNote(barLength, noteLengths);
 
-            string[] output = string_output(written_lengths, Convert.ToInt16(mainWindow.cbStrings.Text), bar_length);
+            string[] output = stringOutput(writtenLengths, Convert.ToInt16(mainWindow.cbStrings.Text), barLength);
             return output;
         }
 
-        public List<int> get_note_lengths()
+        public List<int> getNoteLengths()
                 {
                     List<int> notelengths = new List<int>();
                     foreach (Note note in notes)
@@ -64,11 +64,11 @@ namespace TABit
                     return notelengths;
                 }
 
-        public int get_bar_length(List<int> note_lengths)
+        public int getBarLength(List<int> noteLengths)
         {
             int b = 1;
 
-            foreach (int a in note_lengths)
+            foreach (int a in noteLengths)
             {
                 b = lcm(a, b);
             }            
@@ -91,82 +91,82 @@ namespace TABit
             return (a / gcf(a, b)) * b;
         }
 
-        public Dictionary<int, int> get_written_length_of_each_note(int bar_length, List<int> notelengths)
+        public Dictionary<int, int> getWrittenLengthOfEachNote(int barLength, List<int> notelengths)
         {
             Dictionary<int, int> writtenlengths = new Dictionary<int, int>();
             foreach (int notelength in notelengths)
             {
-                writtenlengths[notelength] = bar_length / notelength;
+                writtenlengths[notelength] = barLength / notelength;
             }
 
             return writtenlengths;
         }
 
-        public String[] string_output(Dictionary<int, int> written_lengths, int number_of_strings, int bar_length)
+        public String[] stringOutput(Dictionary<int, int> writtenLengths, int numberOfStrings, int barLength)
         {
-            String[] output = new string[number_of_strings];
+            String[] output = new string[numberOfStrings];
 
 
             //checks if bar is to long
-            if (is_written_bar_ok(bar_length) == false)
+            if (isWrittenBarOk(barLength) == false)
             {
                 throw new Exception("Bar is to long or consisting of notes not allowed");
             }
             //TODO: use the are_notes_in_bar_ok function too
 
 
-            for (int string_number = 1; string_number <= number_of_strings; string_number++)
+            for (int stringNumber = 1; stringNumber <= numberOfStrings; stringNumber++)
             {
                 //Get all notes on string_number
-                List<Note> notes_on_string = new List<Note>();
+                List<Note> notesOnString = new List<Note>();
                 foreach (Note note in notes)
                 {
-                    if (note.stringnumber == string_number)
+                    if (note.stringnumber == stringNumber)
                     {
-                        notes_on_string.Add(note);
+                        notesOnString.Add(note);
                     }
                 }
 
                  
-                if (notes_on_string.Count() > 0)
+                if (notesOnString.Count() > 0)
                 {
-                    for (int character_number = 0; character_number <= bar_length - 1; character_number++)
+                    for (int characterNumber = 0; characterNumber <= barLength - 1; characterNumber++)
                     {
-                        foreach (Note note in notes_on_string)
+                        foreach (Note note in notesOnString)
                         {
-                            if (note.startpoint == character_number)
+                            if (note.startpoint == characterNumber)
                             {
-                                int note_fret = note.fret;
+                                int noteFret = note.fret;
 
-                                if (note_fret >= 0 && note_fret <= 9)
+                                if (noteFret >= 0 && noteFret <= 9)
                                 {
                                     //Fret has one character --> pass one character at end of the foreach
-                                    output[string_number - 1] += Convert.ToString(note_fret);
+                                    output[stringNumber - 1] += Convert.ToString(noteFret);
                                 }
-                                else if (note_fret >= 10)
+                                else if (noteFret >= 10)
                                 {
                                     //Fret has two characters --> pass one character here and one at end of the foreach
-                                    output[string_number - 1] += Convert.ToString(note_fret);
-                                    character_number ++;
+                                    output[stringNumber - 1] += Convert.ToString(noteFret);
+                                    characterNumber ++;
                                 }
-                                else if (note_fret == -1)
+                                else if (noteFret == -1)
                                 {
                                     //The note is a ghost-note --> pass one character at end of the foreach
-                                    output[string_number - 1] += "x";
+                                    output[stringNumber - 1] += "x";
                                 }
                             }
                             else
                             {
-                                output[string_number - 1] += "-";
+                                output[stringNumber - 1] += "-";
                             }
                         }
                     }
                 }
                 else
                 {
-                    for (int character_number = 0; character_number <= bar_length - 1; character_number++)
+                    for (int characterNumber = 0; characterNumber <= barLength - 1; characterNumber++)
                     {
-                        output[string_number - 1] += "-";
+                        output[stringNumber - 1] += "-";
                     }
                 }
             }
@@ -175,22 +175,22 @@ namespace TABit
             return output;
         }
 
-        public bool is_written_bar_ok(int bar_length)
+        public bool isWrittenBarOk(int barLength)
         {
-            bool bar_is_ok = true;
+            bool barIsOk = true;
 
             foreach (Note note in notes)
             {
-                if ((note.fret <= 9 && note.fret >= 0 && note.startpoint > bar_length - 1) || (note.fret > 9 && note.startpoint >= bar_length - 1))
+                if ((note.fret <= 9 && note.fret >= 0 && note.startpoint > barLength - 1) || (note.fret > 9 && note.startpoint >= barLength - 1))
                 {
-                    bar_is_ok = false;
+                    barIsOk = false;
                 }
             }
 
-            return bar_is_ok;
+            return barIsOk;
         }
 
-        public bool are_notes_in_bar_ok(Dictionary<int, int> written_lengths, int number_of_strings)
+        public bool areNotesInBarOk(Dictionary<int, int> writtenLengths, int numberOfStrings)
         {
             /*
              * TODO:
@@ -199,15 +199,15 @@ namespace TABit
              * 
              * 
              */
-            bool bar_is_ok = true;
-            int[] length_on_string = new int[number_of_strings];
+            bool barIsOk = true;
+            int[] lengthOnString = new int[numberOfStrings];
 
             foreach (Note note in notes)
             {
             //    length_on_string[note.stringnumber] = written_lengths[note.length]
             }
 
-            return bar_is_ok;
+            return barIsOk;
         }
 
         public void addNote(int fret, int length, int stringnumber, int startpoint)
