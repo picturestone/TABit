@@ -91,7 +91,7 @@
             this.tlpOut.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
             this.tlpOut.ColumnCount = 2;
             this.tlpOut.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpOut.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 206F));
+            this.tlpOut.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 207F));
             this.tlpOut.Controls.Add(this.tlpMenu, 0, 0);
             this.tlpOut.Controls.Add(this.tlpRight, 1, 1);
             this.tlpOut.Controls.Add(this.bSettings, 1, 0);
@@ -113,7 +113,7 @@
             this.tlpMenu.ColumnCount = 3;
             this.tlpMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 470F));
             this.tlpMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 206F));
+            this.tlpMenu.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 207F));
             this.tlpMenu.Controls.Add(this.tlpMenuicons, 0, 0);
             this.tlpMenu.Controls.Add(this.pbNote, 2, 0);
             this.tlpMenu.Controls.Add(this.tableLayoutPanel4, 1, 0);
@@ -123,7 +123,7 @@
             this.tlpMenu.Name = "tlpMenu";
             this.tlpMenu.RowCount = 1;
             this.tlpMenu.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpMenu.Size = new System.Drawing.Size(923, 150);
+            this.tlpMenu.Size = new System.Drawing.Size(922, 150);
             this.tlpMenu.TabIndex = 0;
             // 
             // tlpMenuicons
@@ -236,7 +236,7 @@
             this.pbNote.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.pbNote.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pbNote.InitialImage = null;
-            this.pbNote.Location = new System.Drawing.Point(769, 25);
+            this.pbNote.Location = new System.Drawing.Point(767, 25);
             this.pbNote.Name = "pbNote";
             this.pbNote.Size = new System.Drawing.Size(100, 100);
             this.pbNote.TabIndex = 1;
@@ -256,7 +256,7 @@
             this.tableLayoutPanel4.RowCount = 2;
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel4.Size = new System.Drawing.Size(243, 148);
+            this.tableLayoutPanel4.Size = new System.Drawing.Size(241, 148);
             this.tableLayoutPanel4.TabIndex = 2;
             // 
             // tableLayoutPanel5
@@ -275,7 +275,7 @@
             this.tableLayoutPanel5.RowCount = 2;
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel5.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel5.Size = new System.Drawing.Size(243, 74);
+            this.tableLayoutPanel5.Size = new System.Drawing.Size(241, 74);
             this.tableLayoutPanel5.TabIndex = 0;
             // 
             // lTiming
@@ -283,7 +283,7 @@
             this.lTiming.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lTiming.AutoSize = true;
             this.lTiming.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lTiming.Location = new System.Drawing.Point(152, 16);
+            this.lTiming.Location = new System.Drawing.Point(150, 16);
             this.lTiming.Name = "lTiming";
             this.lTiming.Size = new System.Drawing.Size(60, 21);
             this.lTiming.TabIndex = 1;
@@ -313,7 +313,7 @@
             "6",
             "7",
             "8"});
-            this.cbStrings.Location = new System.Drawing.Point(31, 41);
+            this.cbStrings.Location = new System.Drawing.Point(30, 41);
             this.cbStrings.Name = "cbStrings";
             this.cbStrings.Size = new System.Drawing.Size(59, 29);
             this.cbStrings.TabIndex = 2;
@@ -329,12 +329,12 @@
             this.tableLayoutPanel6.Controls.Add(this.label1, 1, 0);
             this.tableLayoutPanel6.Controls.Add(this.cbTimingDownside, 2, 0);
             this.tableLayoutPanel6.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel6.Location = new System.Drawing.Point(121, 37);
+            this.tableLayoutPanel6.Location = new System.Drawing.Point(120, 37);
             this.tableLayoutPanel6.Margin = new System.Windows.Forms.Padding(0);
             this.tableLayoutPanel6.Name = "tableLayoutPanel6";
             this.tableLayoutPanel6.RowCount = 1;
             this.tableLayoutPanel6.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel6.Size = new System.Drawing.Size(122, 37);
+            this.tableLayoutPanel6.Size = new System.Drawing.Size(121, 37);
             this.tableLayoutPanel6.TabIndex = 3;
             // 
             // cbTimingUpside
@@ -388,7 +388,7 @@
             "8"});
             this.cbTimingDownside.Location = new System.Drawing.Point(69, 3);
             this.cbTimingDownside.Name = "cbTimingDownside";
-            this.cbTimingDownside.Size = new System.Drawing.Size(50, 29);
+            this.cbTimingDownside.Size = new System.Drawing.Size(49, 29);
             this.cbTimingDownside.TabIndex = 6;
             this.cbTimingDownside.TabStop = false;
             // 
@@ -399,7 +399,7 @@
             this.bTuning.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
             this.bTuning.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bTuning.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bTuning.Location = new System.Drawing.Point(51, 91);
+            this.bTuning.Location = new System.Drawing.Point(50, 91);
             this.bTuning.Name = "bTuning";
             this.bTuning.Size = new System.Drawing.Size(140, 40);
             this.bTuning.TabIndex = 1;
@@ -418,7 +418,7 @@
             this.tlpRight.Controls.Add(this.tableLayoutPanel3, 1, 2);
             this.tlpRight.Controls.Add(this.bPM, 1, 4);
             this.tlpRight.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tlpRight.Location = new System.Drawing.Point(925, 152);
+            this.tlpRight.Location = new System.Drawing.Point(924, 152);
             this.tlpRight.Margin = new System.Windows.Forms.Padding(0);
             this.tlpRight.Name = "tlpRight";
             this.tlpRight.RowCount = 6;
@@ -428,7 +428,7 @@
             this.tlpRight.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 8F));
             this.tlpRight.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 42F));
             this.tlpRight.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tlpRight.Size = new System.Drawing.Size(206, 496);
+            this.tlpRight.Size = new System.Drawing.Size(207, 496);
             this.tlpRight.TabIndex = 1;
             // 
             // tableLayoutPanel1
@@ -449,7 +449,7 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(190, 166);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(191, 166);
             this.tableLayoutPanel1.TabIndex = 0;
             this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint);
             // 
@@ -460,7 +460,7 @@
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 23F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 23F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 53F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 54F));
             this.tableLayoutPanel2.Controls.Add(this.bFull, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.bHalf, 2, 0);
             this.tableLayoutPanel2.Controls.Add(this.bQuarter, 4, 0);
@@ -474,7 +474,7 @@
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(190, 83);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(191, 83);
             this.tableLayoutPanel2.TabIndex = 13;
             // 
             // bFull
@@ -512,7 +512,7 @@
             this.bQuarter.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
             this.bQuarter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bQuarter.Image = global::TABit.Properties.Resources.note_quarter;
-            this.bQuarter.Location = new System.Drawing.Point(146, 5);
+            this.bQuarter.Location = new System.Drawing.Point(147, 5);
             this.bQuarter.Name = "bQuarter";
             this.bQuarter.Size = new System.Drawing.Size(33, 31);
             this.bQuarter.TabIndex = 2;
@@ -554,7 +554,7 @@
             this.b32.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
             this.b32.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.b32.Image = global::TABit.Properties.Resources.note_32;
-            this.b32.Location = new System.Drawing.Point(146, 46);
+            this.b32.Location = new System.Drawing.Point(147, 46);
             this.b32.Name = "b32";
             this.b32.Size = new System.Drawing.Size(33, 32);
             this.b32.TabIndex = 5;
@@ -570,7 +570,7 @@
             this.bTriol.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bTriol.Location = new System.Drawing.Point(3, 86);
             this.bTriol.Name = "bTriol";
-            this.bTriol.Size = new System.Drawing.Size(184, 35);
+            this.bTriol.Size = new System.Drawing.Size(185, 35);
             this.bTriol.TabIndex = 14;
             this.bTriol.TabStop = false;
             this.bTriol.Text = "- 3 -";
@@ -585,7 +585,7 @@
             this.bQuintol.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bQuintol.Location = new System.Drawing.Point(3, 127);
             this.bQuintol.Name = "bQuintol";
-            this.bQuintol.Size = new System.Drawing.Size(184, 36);
+            this.bQuintol.Size = new System.Drawing.Size(185, 36);
             this.bQuintol.TabIndex = 15;
             this.bQuintol.TabStop = false;
             this.bQuintol.Text = "- 5 -";
@@ -598,7 +598,7 @@
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 23F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 45F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 23F));
-            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 53F));
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 54F));
             this.tableLayoutPanel3.Controls.Add(this.bRelease, 0, 0);
             this.tableLayoutPanel3.Controls.Add(this.bHammerOn, 2, 0);
             this.tableLayoutPanel3.Controls.Add(this.bPullOff, 4, 0);
@@ -615,7 +615,7 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(190, 112);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(191, 112);
             this.tableLayoutPanel3.TabIndex = 12;
             // 
             // bRelease
@@ -747,7 +747,7 @@
             this.bPM.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bPM.Location = new System.Drawing.Point(11, 297);
             this.bPM.Name = "bPM";
-            this.bPM.Size = new System.Drawing.Size(184, 36);
+            this.bPM.Size = new System.Drawing.Size(185, 36);
             this.bPM.TabIndex = 13;
             this.bPM.TabStop = false;
             this.bPM.Text = "PM";
@@ -760,7 +760,7 @@
             this.bSettings.FlatAppearance.BorderColor = System.Drawing.Color.DarkGray;
             this.bSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.bSettings.Image = global::TABit.Properties.Resources.settings;
-            this.bSettings.Location = new System.Drawing.Point(993, 41);
+            this.bSettings.Location = new System.Drawing.Point(992, 41);
             this.bSettings.Name = "bSettings";
             this.bSettings.Size = new System.Drawing.Size(70, 70);
             this.bSettings.TabIndex = 2;
@@ -780,8 +780,9 @@
             this.tbWorkspace.Margin = new System.Windows.Forms.Padding(0);
             this.tbWorkspace.Multiline = true;
             this.tbWorkspace.Name = "tbWorkspace";
+            this.tbWorkspace.ReadOnly = true;
             this.tbWorkspace.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tbWorkspace.Size = new System.Drawing.Size(923, 496);
+            this.tbWorkspace.Size = new System.Drawing.Size(922, 496);
             this.tbWorkspace.TabIndex = 3;
             // 
             // Main
