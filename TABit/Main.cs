@@ -75,10 +75,10 @@ namespace TABit
 
             #region KeyActionDic
             KeyActionDict.Add(27,new Actions.OpenMenueAction());     //Escape
-            KeyActionDict.Add(112, new Actions.ChooseBarAction(112));   //F1 
-            KeyActionDict.Add(113, new Actions.ChooseBarAction(113));   //F2
-            KeyActionDict.Add(114, new Actions.ChooseBarAction(114));   //F3
-            KeyActionDict.Add(115, new Actions.ChooseBarAction(115));   //F4
+            KeyActionDict.Add(112, new Actions.ChooseBarAction(112,this));   //F1 
+            KeyActionDict.Add(113, new Actions.ChooseBarAction(113,this));   //F2
+            KeyActionDict.Add(114, new Actions.ChooseBarAction(114,this));   //F3
+            KeyActionDict.Add(115, new Actions.ChooseBarAction(115,this));   //F4
             KeyActionDict.Add(49, new Actions.WriteNoteAction(49, currentLength, Convert.ToInt16(cbStrings.Text)));    //1 oben
             KeyActionDict.Add(50, new Actions.WriteNoteAction(50, currentLength, Convert.ToInt16(cbStrings.Text)));    //2 oben       
             KeyActionDict.Add(51, new Actions.WriteNoteAction(51, currentLength, Convert.ToInt16(cbStrings.Text)));    //3 oben   
