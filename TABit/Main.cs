@@ -150,7 +150,7 @@ namespace TABit
             ///////////////////////////////////////////////
 
             Block asdf = new Block();
-            asdf.makeSpaceInBarsInBlock(3, 3);
+            //asdf.makeSpaceInBarsInBlock(3, 3);
 
             //Make a new Sheet
             notesheet = new Sheet(Convert.ToInt16(cbStrings.Text), Config.getCharsPerString(), Config.getLinesBetweenBlocks(), this);

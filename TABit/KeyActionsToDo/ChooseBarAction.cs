@@ -33,12 +33,17 @@ namespace TABit.Actions
             int CurrentPosition = box.SelectionStart;
 
             maxChars = Config.getCharsPerString();
+
+
             //BarLength = Config.getBarLenght();      from Bar (look up in Config)
             //Hit = BarLength/4;
             //LastBar
 
 
             int currentBar = Config.getBarWhereCursorIsIn(main);
+
+
+            
             //int currentHit = Convert.ToInt32(Math.Ceiling(Convert.ToDecimal(CurrentPosition / Hit)));
             //int CurrentPositionInBar = Convert.ToInt32(CurrentPosition - (Math.Floor(Convert.ToDecimal(CurrentPosition/BarLength)) *BarLength));
             //int CurrentPositionInHit = Convert.ToInt32(CurrentPosition - (Math.Floor(Convert.ToDecimal(CurrentPosition / Hit)) * Hit));

@@ -25,7 +25,7 @@ namespace TABit.Actions
 
             string PressedKey = kc.ConvertToString(Pressed);
 
-            if (PressedKey == "Right" || PressedKey== "Space")
+            if (PressedKey == "Right")
             {
                 box.Select(CurrentPosition, 0);
             }
@@ -33,7 +33,10 @@ namespace TABit.Actions
             {
                 box.Select(CurrentPosition, 0);
             }
-            
+            else if (PressedKey == "Space")
+            {
+                box.Select(CurrentPosition + 1, 0);
+            }
         }
     }
 }
