@@ -48,6 +48,9 @@
     <Compile Include="Bar.cs" />
     <Compile Include="Block.cs" />
     <Compile Include="Config.cs" />
+    <Compile Include="CustomLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="KeyAction.cs" />
     <Compile Include="KeyActionsToDo\ChooseBarAction.cs" />
     <Compile Include="KeyActionsToDo\ChooseLineAction.cs" />

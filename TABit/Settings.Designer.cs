@@ -45,16 +45,16 @@
             this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel4 = new System.Windows.Forms.TableLayoutPanel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.customLabel1 = new TABit.CustomLabel();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -223,7 +223,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 30);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(989, 531);
+            this.tabPage1.Size = new System.Drawing.Size(1083, 531);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Chars";
             // 
@@ -274,7 +274,6 @@
             this.tableLayoutPanel4.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel4.Controls.Add(this.label12, 1, 4);
             this.tableLayoutPanel4.Controls.Add(this.label11, 0, 4);
-            this.tableLayoutPanel4.Controls.Add(this.label10, 1, 3);
             this.tableLayoutPanel4.Controls.Add(this.label9, 0, 3);
             this.tableLayoutPanel4.Controls.Add(this.label8, 1, 2);
             this.tableLayoutPanel4.Controls.Add(this.label7, 0, 2);
@@ -282,6 +281,7 @@
             this.tableLayoutPanel4.Controls.Add(this.label5, 0, 1);
             this.tableLayoutPanel4.Controls.Add(this.label4, 1, 0);
             this.tableLayoutPanel4.Controls.Add(this.label3, 0, 0);
+            this.tableLayoutPanel4.Controls.Add(this.customLabel1, 1, 3);
             this.tableLayoutPanel4.Location = new System.Drawing.Point(356, 370);
             this.tableLayoutPanel4.Name = "tableLayoutPanel4";
             this.tableLayoutPanel4.RowCount = 5;
@@ -293,101 +293,17 @@
             this.tableLayoutPanel4.Size = new System.Drawing.Size(365, 152);
             this.tableLayoutPanel4.TabIndex = 2;
             // 
-            // label3
+            // label12
             // 
-            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.label3.Location = new System.Drawing.Point(3, 4);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(115, 21);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Fret Selection";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label4
-            // 
-            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label4.AutoSize = true;
-            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.label4.Location = new System.Drawing.Point(185, 4);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(159, 21);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Change active Bar";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label5
-            // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label5.AutoSize = true;
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(181)))), ((int)(((byte)(21)))));
-            this.label5.Location = new System.Drawing.Point(3, 34);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(129, 21);
-            this.label5.TabIndex = 2;
-            this.label5.Text = "String Selection";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label6
-            // 
-            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label6.AutoSize = true;
-            this.label6.ForeColor = System.Drawing.Color.Gray;
-            this.label6.Location = new System.Drawing.Point(185, 34);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(177, 21);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Change Note Length";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label7
-            // 
-            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label7.AutoSize = true;
-            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(106)))), ((int)(((byte)(0)))));
-            this.label7.Location = new System.Drawing.Point(3, 64);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(90, 21);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "Next Note";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label8
-            // 
-            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label8.AutoSize = true;
-            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(19)))), ((int)(((byte)(127)))));
-            this.label8.Location = new System.Drawing.Point(185, 64);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(55, 21);
-            this.label8.TabIndex = 5;
-            this.label8.Text = "Menu";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label9
-            // 
-            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label9.AutoSize = true;
-            this.label9.ForeColor = System.Drawing.Color.Red;
-            this.label9.Location = new System.Drawing.Point(3, 94);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(116, 21);
-            this.label9.TabIndex = 6;
-            this.label9.Text = "Previous Note";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label10
-            // 
-            this.label10.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label10.AutoSize = true;
-            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(255)))), ((int)(((byte)(0)))));
-            this.label10.Location = new System.Drawing.Point(185, 94);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(94, 21);
-            this.label10.TabIndex = 7;
-            this.label10.Text = "Ghostnote";
-            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label12.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label12.AutoSize = true;
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(0)))), ((int)(((byte)(110)))));
+            this.label12.Location = new System.Drawing.Point(185, 125);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(109, 21);
+            this.label12.TabIndex = 9;
+            this.label12.Text = "Change Line";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label11
             // 
@@ -401,17 +317,102 @@
             this.label11.Text = "Delete";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label12
+            // label9
             // 
-            this.label12.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.label12.AutoSize = true;
-            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(0)))), ((int)(((byte)(110)))));
-            this.label12.Location = new System.Drawing.Point(185, 125);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(109, 21);
-            this.label12.TabIndex = 9;
-            this.label12.Text = "Change Line";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label9.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label9.AutoSize = true;
+            this.label9.ForeColor = System.Drawing.Color.Red;
+            this.label9.Location = new System.Drawing.Point(3, 94);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(116, 21);
+            this.label9.TabIndex = 6;
+            this.label9.Text = "Previous Note";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label8
+            // 
+            this.label8.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label8.AutoSize = true;
+            this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(19)))), ((int)(((byte)(127)))));
+            this.label8.Location = new System.Drawing.Point(185, 64);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(55, 21);
+            this.label8.TabIndex = 5;
+            this.label8.Text = "Menu";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label7
+            // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label7.AutoSize = true;
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(106)))), ((int)(((byte)(0)))));
+            this.label7.Location = new System.Drawing.Point(3, 64);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(90, 21);
+            this.label7.TabIndex = 4;
+            this.label7.Text = "Next Note";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label6
+            // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label6.AutoSize = true;
+            this.label6.ForeColor = System.Drawing.Color.Gray;
+            this.label6.Location = new System.Drawing.Point(185, 34);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(177, 21);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "Change Note Length";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label5.AutoSize = true;
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(181)))), ((int)(((byte)(21)))));
+            this.label5.Location = new System.Drawing.Point(3, 34);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(129, 21);
+            this.label5.TabIndex = 2;
+            this.label5.Text = "String Selection";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label4
+            // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label4.AutoSize = true;
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.label4.Location = new System.Drawing.Point(185, 4);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(159, 21);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Change active Bar";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(127)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label3.Location = new System.Drawing.Point(3, 4);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(115, 21);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Fret Selection";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // customLabel1
+            // 
+            this.customLabel1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.customLabel1.AutoSize = true;
+            this.customLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(255)))), ((int)(((byte)(0)))));
+            this.customLabel1.Location = new System.Drawing.Point(185, 94);
+            this.customLabel1.Name = "customLabel1";
+            this.customLabel1.OutlineForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(127)))), ((int)(((byte)(14)))));
+            this.customLabel1.OutlineWidth = 2F;
+            this.customLabel1.Size = new System.Drawing.Size(94, 21);
+            this.customLabel1.TabIndex = 10;
+            this.customLabel1.Text = "Ghostnote";
             // 
             // Settings
             // 
@@ -458,7 +459,6 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel4;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
@@ -466,5 +466,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
+        private CustomLabel customLabel1;
     }
 }
